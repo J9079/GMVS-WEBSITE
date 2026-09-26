@@ -4,29 +4,44 @@ import { SOCIAL_LINKS } from '../data/socials';
 import { SocialIcon } from './SocialIcons';
 
 export default function TopBar({ lang, setLang }) {
+  const announcements = [
+    "GMVS honoured with Ajmer District Level Honour by District Collector for grassroots social excellence.",
+    "Commended by Hon'ble Prime Minister Narendra Modi in Mann Ki Baat (Episode 92) for rural women apparel cluster DARJI ONLINE.",
+    "Constructed 180+ traditional rainwater harvesting Taankas & Khadins across drought-prone Panchayats of Rajasthan.",
+    "Organized 620+ Women Self-Help Groups (SHGs) mobilizing 14,500+ rural families into financial self-reliance.",
+    "All contributions eligible for 50% Tax Exemption under Section 80-G of the Income Tax Act & FCRA Reg # 125410040."
+  ];
+
   return (
-    <aside className="top-bar">
-      <div className="container-wide top-bar-inner">
-        <div className="top-bar-left">
-          <span className="top-bar-item">
-            <span className="top-badge-80g">80-G Tax Exempt</span>
-            <span>50% Tax Deduction on all Donations</span>
-          </span>
-          <span className="top-bar-item hidden-mobile" style={{ opacity: 0.85 }}>
-            <ShieldCheck size={14} style={{ color: '#FDE68A', display: 'inline', marginRight: '4px' }} />
-            <span>FCRA Reg: <strong>125410040</strong> (Govt. of India)</span>
-          </span>
-          <span className="top-bar-item hidden-tablet" style={{ opacity: 0.85 }}>
-            <span>Act 28 Reg: <strong>52/1998-99</strong></span>
-          </span>
+    <aside className="hr-corner-bar">
+      <div className="container-wide hr-corner-inner">
+        <div className="hr-corner-left">
+          <div className="hr-corner-badge">GMVS Corner</div>
+          <div className="hr-corner-ticker" title="Click or hover to pause updates">
+            <div className="ticker-text">
+              {announcements.map((text, idx) => (
+                <span key={idx} className="ticker-item">
+                  <span>{text}</span>
+                  <span className="ticker-separator">&bull;</span>
+                </span>
+              ))}
+              {/* Duplicate loop for continuous ticker */}
+              {announcements.map((text, idx) => (
+                <span key={`dup-${idx}`} className="ticker-item">
+                  <span>{text}</span>
+                  <span className="ticker-separator">&bull;</span>
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
 
-        <div className="top-bar-right">
-          <span className="top-bar-item">
+        <div className="top-bar-right" style={{ flexShrink: 0, gap: '1.25rem' }}>
+          <span className="top-bar-item hidden-mobile">
             <Phone size={13} />
-            <a href="tel:+919672979032">+91-9672979032</a>
+            <a href="tel:+919672979032" style={{ color: '#FDE68A' }}>+91-9672979032</a>
           </span>
-          <span className="top-bar-item">
+          <span className="top-bar-item hidden-tablet">
             <Mail size={13} />
             <a href="mailto:info@gmvs.org.in">info@gmvs.org.in</a>
           </span>

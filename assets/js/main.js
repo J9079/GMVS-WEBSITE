@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCopyButtons();
   initScrollAnimations();
   initBackToTop();
+  initAwardShowcaseCarousel();
 });
 
 /* ==========================================================================
@@ -734,5 +735,99 @@ function initBackToTop() {
     });
   });
 }
+
+/* ==========================================================================
+   14. Award Showcase Carousel (Manjari Split Hero)
+   ========================================================================== */
+function initAwardShowcaseCarousel() {
+  const tabs = document.querySelectorAll('.awwardbox-tab');
+  const imgEl = document.getElementById('award-showcase-img');
+  const badgeEl = document.getElementById('award-showcase-badge');
+  const titleEl = document.getElementById('award-showcase-title');
+  const descEl = document.getElementById('award-showcase-desc');
+  const linkEl = document.getElementById('award-showcase-link');
+
+  if (!tabs.length || !imgEl) return;
+
+  const staticAwards = [
+    {
+      badge: "State & District Honour",
+      title: "Honoured with Ajmer District Level Honour by District Collector for Grassroots Social Excellence",
+      desc: "Recognised by the Rajasthan State Administration and District Collectorate for over 28 years of tireless grassroots service in women empowerment, child protection, and community development.",
+      image: "assets/images/hero-slide-1.jpg",
+      link: "awards.html"
+    },
+    {
+      badge: "National Commendation",
+      title: "Commended by Hon'ble PM Narendra Modi in Mann Ki Baat (Ep. 92) for Women Apparel Cluster DARJI ONLINE",
+      desc: "National commendation on Mann Ki Baat highlighting GMVS board member Setha Singh Rawat and rural women artisans transforming traditional sewing skills into sustainable livelihoods.",
+      image: "assets/images/hero-slide-2.jpg",
+      link: "leadership.html"
+    },
+    {
+      badge: "Water Conservation Milestone",
+      title: "Constructed 180+ Traditional Rainwater Harvesting Taankas & Khadins across Drought-Prone Hamlets",
+      desc: "Revitalising indigenous Aravalli water wisdom to provide reliable drinking water and year-round moisture security to vulnerable rural families.",
+      image: "assets/images/nrm.jpg",
+      link: "programs.html#nrm"
+    },
+    {
+      badge: "Transformative Partnership",
+      title: "Scaling Women's Collectives with RAJEEVIKA, NABARD, and Tata Trusts across Rajasthan",
+      desc: "Mobilising over 620 Self-Help Groups into self-governing village federations, financial credit networks, and women-owned micro-enterprises.",
+      image: "assets/images/women-empowerment.jpg",
+      link: "partners.html"
+    }
+  ];
+
+  let currentIndex = 0;
+  let cycleTimer = null;
+
+  function setAward(index) {
+    currentIndex = index;
+    const award = staticAwards[index];
+    if (!award) return;
+
+    tabs.forEach((tab, i) => {
+      tab.classList.toggle('active', i === index);
+    });
+
+    imgEl.style.opacity = '0.4';
+    setTimeout(() => {
+      imgEl.src = award.image;
+      imgEl.style.opacity = '1';
+    }, 150);
+
+    if (badgeEl) {
+      badgeEl.innerHTML = `
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        <span>${award.badge}</span>
+      `;
+    }
+
+    if (titleEl) titleEl.textContent = award.title;
+    if (descEl) descEl.textContent = award.desc;
+    if (linkEl) linkEl.setAttribute('href', award.link);
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      clearInterval(cycleTimer);
+      const idx = parseInt(tab.getAttribute('data-index') || '0', 10);
+      setAward(idx);
+      startCycle();
+    });
+  });
+
+  function startCycle() {
+    cycleTimer = setInterval(() => {
+      const nextIdx = (currentIndex + 1) % staticAwards.length;
+      setAward(nextIdx);
+    }, 5500);
+  }
+
+  startCycle();
+}
+
 
 
