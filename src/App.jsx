@@ -4,6 +4,7 @@ import TopBar from './components/TopBar';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Toast from './components/Toast';
+import BackToTop from './components/BackToTop';
 
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
@@ -32,6 +33,50 @@ function ScrollToTop() {
   return null;
 }
 
+function ScrollRevealObserver() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    // Reveal animated sections and cards as they enter viewport
+    const revealTargets = document.querySelectorAll(
+      '.reveal-on-scroll, .program-card, .story-card, .leader-card, .award-card, .partner-card, .office-card, .bank-card, .stat-card'
+    );
+
+    if (!('IntersectionObserver' in window)) {
+      revealTargets.forEach(el => el.classList.add('in-view'));
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -30px 0px'
+    });
+
+    revealTargets.forEach((el, index) => {
+      if (!el.classList.contains('reveal-on-scroll')) {
+        el.classList.add('reveal-on-scroll');
+        // Add staggering if in a grid
+        const staggerClass = `stagger-${(index % 5) + 1}`;
+        el.classList.add(staggerClass);
+      }
+      observer.observe(el);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [pathname]);
+
+  return null;
+}
+
 export default function App() {
   const [lang, setLang] = useState('en');
   const [toast, setToast] = useState(null);
@@ -46,6 +91,7 @@ export default function App() {
   return (
     <div className="app-container">
       <ScrollToTop />
+      <ScrollRevealObserver />
       <TopBar lang={lang} setLang={setLang} />
       <Navbar />
 
@@ -66,6 +112,7 @@ export default function App() {
       </main>
 
       <Footer />
+      <BackToTop />
       <Toast toast={toast} onClose={() => setToast(null)} />
     </div>
   );

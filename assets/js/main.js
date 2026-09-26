@@ -15,6 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initBilingualToggle();
   initSmoothScroll();
   initCopyButtons();
+  initScrollAnimations();
+  initBackToTop();
 });
 
 /* ==========================================================================
@@ -657,4 +659,80 @@ function initCopyButtons() {
     });
   });
 }
+
+/* ==========================================================================
+   12. Scroll Entrance Animations
+   ========================================================================== */
+function initScrollAnimations() {
+  const revealTargets = document.querySelectorAll(
+    '.reveal-on-scroll, .program-card, .story-card, .leader-card, .award-card, .partner-card, .office-card, .bank-card, .stat-card'
+  );
+
+  if (!revealTargets.length) return;
+
+  if (!('IntersectionObserver' in window)) {
+    revealTargets.forEach(el => el.classList.add('in-view'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -30px 0px'
+  });
+
+  revealTargets.forEach((el, index) => {
+    if (!el.classList.contains('reveal-on-scroll')) {
+      el.classList.add('reveal-on-scroll');
+      const staggerClass = `stagger-${(index % 5) + 1}`;
+      el.classList.add(staggerClass);
+    }
+    observer.observe(el);
+  });
+}
+
+/* ==========================================================================
+   13. Floating Back to Top Action
+   ========================================================================== */
+function initBackToTop() {
+  let backToTopBtn = document.getElementById('back-to-top');
+
+  // If button not already present in the HTML, create dynamically
+  if (!backToTopBtn) {
+    backToTopBtn = document.createElement('button');
+    backToTopBtn.id = 'back-to-top';
+    backToTopBtn.className = 'back-to-top-btn';
+    backToTopBtn.setAttribute('aria-label', 'Back to top');
+    backToTopBtn.setAttribute('title', 'Back to top');
+    backToTopBtn.innerHTML = `
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
+      </svg>
+    `;
+    document.body.appendChild(backToTopBtn);
+  }
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 350) {
+      backToTopBtn.classList.add('visible');
+    } else {
+      backToTopBtn.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
+
 
