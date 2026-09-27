@@ -1799,7 +1799,7 @@ p {
   object-fit: contain;
 }
 
-/* --- 80-G Tax Benefit Calculator Widget --- */
+/* --- Legacy Calculator Widget Styles --- */
 .calculator-card {
   background: linear-gradient(135deg, #FFFFFF 0%, #FAF8F5 100%);
   border-radius: var(--radius-xl);

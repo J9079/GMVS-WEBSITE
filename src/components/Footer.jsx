@@ -136,9 +136,8 @@ export default function Footer() {
         <div className="footer-legal-badges" style={{ justifyContent: 'center' }}>
           <span className="legal-badge-pill">Rajasthan Societies Act 28 (52/1998-99)</span>
           <span className="legal-badge-pill">MHA FCRA Reg # 125410040</span>
-          <span className="legal-badge-pill">Income Tax 12-AA &amp; 80-G Certified</span>
           <span className="legal-badge-pill">NITI Aayog Darpan ID: RJ/2017/0160241</span>
-          <span className="legal-badge-pill">TAN: JDHG10077E</span>
+          <span className="legal-badge-pill">Ajmer District Level Honour</span>
         </div>
       </div>
 
@@ -151,7 +150,7 @@ export default function Footer() {
           <Link to="/contact">Contact Secretariat</Link>
           <span>&bull;</span>
           <Link to="/donate" style={{ color: 'var(--accent-gold)', display: 'inline-flex', alignItems: 'center', gap: '4px', fontWeight: 600 }}>
-            <Heart size={14} fill="currentColor" /> 80-G Tax Benefit
+            <Heart size={14} fill="currentColor" /> Support Our Cause
           </Link>
         </div>
       </div>

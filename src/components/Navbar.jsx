@@ -146,7 +146,7 @@ export default function Navbar() {
           <div className="header-actions">
             <Link to="/donate" className="btn btn-donate-header">
               <Heart size={16} className="heart-icon pulse" />
-              <span>Donate (80-G)</span>
+              <span>Donate Now</span>
             </Link>
 
             <button 
@@ -252,7 +252,7 @@ export default function Navbar() {
               </div>
             </div>
             <div style={{ fontSize: '0.775rem', color: '#64748B' }}>
-              FCRA # 125410040 &bull; Section 80-G Tax Exempt
+              Registered NGO &bull; Est. 1998 &bull; FCRA # 125410040
             </div>
           </div>
 
@@ -270,7 +270,7 @@ export default function Navbar() {
             onClick={() => setMobileOpen(false)}
           >
             <Heart size={16} fill="currentColor" />
-            <span>Donate &amp; Save 50% Tax (80-G)</span>
+            <span>Support Our Mission</span>
           </Link>
         </div>
       </aside>

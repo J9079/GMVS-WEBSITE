@@ -9,7 +9,7 @@ export default function TopBar({ lang, setLang }) {
     "Commended by Hon'ble Prime Minister Narendra Modi in Mann Ki Baat (Episode 92) for rural women apparel cluster DARJI ONLINE.",
     "Constructed 180+ traditional rainwater harvesting Taankas & Khadins across drought-prone Panchayats of Rajasthan.",
     "Organized 620+ Women Self-Help Groups (SHGs) mobilizing 14,500+ rural families into financial self-reliance.",
-    "All contributions eligible for 50% Tax Exemption under Section 80-G of the Income Tax Act & FCRA Reg # 125410040."
+    "Dedicated to rural women empowerment, child education, and sustainable livelihoods since 1998."
   ];
 
   return (

@@ -5,7 +5,6 @@ import {
   Users, Landmark, Compass, Award, Droplets, 
   GraduationCap, HeartHandshake, Stethoscope, Sparkles, ChevronRight
 } from 'lucide-react';
-import TaxCalculator from '../components/TaxCalculator';
 
 const AWARDS_SHOWCASE = [
   {
@@ -389,7 +388,7 @@ export default function HomePage({ lang, onNotify }) {
               </Link>
               <Link to="/donate" className="btn01 btn01-white">
                 <Heart size={16} fill="currentColor" />
-                <span>Donate Under Section 80-G</span>
+                <span>Support Our Mission</span>
               </Link>
             </div>
           </div>
@@ -455,14 +454,7 @@ export default function HomePage({ lang, onNotify }) {
         </div>
       </section>
 
-      {/* 8. Interactive 80-G Tax Exemption Calculator */}
-      <section className="section bg-surface">
-        <div className="container">
-          <TaxCalculator />
-        </div>
-      </section>
-
-      {/* 9. Institutional Partners (Our Partners) */}
+      {/* 8. Institutional Partners (Our Partners) */}
       <section className="section-sm bg-surface-subtle">
         <div className="container">
           <div className="section-header">

@@ -24,7 +24,7 @@ export default function BankCards({ onCopyToast }) {
               <Building2 size={20} style={{ color: 'var(--primary)' }} />
               Indian Donors &bull; SBI Account
             </h4>
-            <span className="bank-badge-domestic">80-G Tax Exempt &bull; Domestic</span>
+            <span className="bank-badge-domestic">Domestic &bull; INR Donations</span>
           </div>
           <div style={{ fontSize: '1.75rem' }}>🇮🇳</div>
         </div>
@@ -93,7 +93,7 @@ export default function BankCards({ onCopyToast }) {
 
         <div style={{ background: 'var(--bg-surface-subtle)', borderRadius: 'var(--radius-md)', padding: '0.85rem 1rem', fontSize: '0.85rem', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '8px' }}>
           <ShieldCheck size={16} style={{ color: 'var(--primary)', flexShrink: 0 }} />
-          <span>Eligible for Indian individuals, corporate CSR, and HUFs. 50% tax deduction under Section 80-G.</span>
+          <span>Eligible for Indian individuals, corporate CSR, and institutions supporting grassroots community development.</span>
         </div>
       </div>
 

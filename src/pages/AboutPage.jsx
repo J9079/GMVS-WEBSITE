@@ -165,19 +165,14 @@ export default function AboutPage() {
                   <td style={{ padding: '1rem 1.5rem' }}><span className="badge-tag" style={{ margin: 0 }}>MHA Approved</span></td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid var(--border-light)' }}>
-                  <td style={{ padding: '1rem 1.5rem' }}><strong>Income Tax Act, 1961 - Section 12-AA</strong></td>
-                  <td style={{ padding: '1rem 1.5rem', fontFamily: 'monospace', color: 'var(--text-main)' }}>Perpetual Non-Profit Registration</td>
-                  <td style={{ padding: '1rem 1.5rem' }}><span className="badge-tag" style={{ margin: 0 }}>Exempt</span></td>
+                  <td style={{ padding: '1rem 1.5rem' }}><strong>Ministry of Corporate Affairs (MCA)</strong></td>
+                  <td style={{ padding: '1rem 1.5rem', fontFamily: 'monospace', color: 'var(--text-main)' }}>Form CSR-1 Registered</td>
+                  <td style={{ padding: '1rem 1.5rem' }}><span className="badge-tag" style={{ margin: 0 }}>Eligible</span></td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid var(--border-light)' }}>
-                  <td style={{ padding: '1rem 1.5rem' }}><strong>Income Tax Act, 1961 - Section 80-G</strong></td>
-                  <td style={{ padding: '1rem 1.5rem', fontFamily: 'monospace', color: 'var(--primary)' }}>50% Tax Deduction on Donations</td>
-                  <td style={{ padding: '1rem 1.5rem' }}><span className="badge-tag" style={{ margin: 0 }}>Valid &bull; 10BE</span></td>
-                </tr>
-                <tr style={{ borderBottom: '1px solid var(--border-light)' }}>
-                  <td style={{ padding: '1rem 1.5rem' }}><strong>Tax Deduction Account Number (TAN)</strong></td>
-                  <td style={{ padding: '1rem 1.5rem', fontFamily: 'monospace' }}>JDHG10077E</td>
-                  <td style={{ padding: '1rem 1.5rem' }}><span className="badge-tag" style={{ margin: 0 }}>Compliant</span></td>
+                  <td style={{ padding: '1rem 1.5rem' }}><strong>District Administration, Ajmer</strong></td>
+                  <td style={{ padding: '1rem 1.5rem', fontFamily: 'monospace', color: 'var(--primary)' }}>District Level Honour Citation</td>
+                  <td style={{ padding: '1rem 1.5rem' }}><span className="badge-tag" style={{ margin: 0 }}>Felicitated</span></td>
                 </tr>
                 <tr>
                   <td style={{ padding: '1rem 1.5rem' }}><strong>NITI Aayog NGO Darpan Portal</strong></td>

@@ -34,7 +34,7 @@ export const LEADERS = [
     quote: '“Every single rupee donated by our supporters must generate measurable, dignified, and lasting transformation at the grassroots level.”',
     bio: `At Gramin Mahila Vikas Sansthan (GMVS), financial transparency, accountability, and the efficient management of resources are given the highest institutional priority under Mr. Shambhu Singh Rawat.
     <br><br>
-    He ensures strict adherence to the principles of statutory compliance, including the Rajasthan Societies Registration Act, Foreign Contribution Regulation Act (FCRA), Income Tax exemptions under Section 12-AA and 80-G, and audited public filings.
+    He ensures strict adherence to the principles of statutory compliance, including the Rajasthan Societies Registration Act, Foreign Contribution Regulation Act (FCRA), institutional governance, and audited public filings.
     <br><br>
     His prudent stewardship has earned GMVS trust from international agencies (GIZ), national banks (ICICI, NABARD), and prominent philanthropic foundations (Tata Trusts, Hans Foundation).`
   },

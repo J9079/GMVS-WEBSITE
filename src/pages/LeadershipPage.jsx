@@ -67,7 +67,7 @@ export default function LeadershipPage() {
                 <ShieldCheck size={20} style={{ color: 'var(--primary)', flexShrink: 0, marginTop: '2px' }} />
                 <div>
                   <strong>Annual External Audits</strong>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', margin: 0 }}>Independent Chartered Accountant audits submitted to MHA and Tax Department.</p>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', margin: 0 }}>Independent Chartered Accountant audits submitted to MHA and statutory regulatory authorities.</p>
                 </div>
               </div>
               <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>

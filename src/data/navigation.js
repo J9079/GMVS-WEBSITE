@@ -29,7 +29,7 @@ export const NAV_LINKS = [
       },
       {
         title: 'Legal Registrations & FCRA',
-        desc: 'Act 28, FCRA 125410040, 12-AA & 80-G credentials',
+        desc: 'Act 28, FCRA 125410040, NITI Aayog & MCA credentials',
         path: '/about#legal',
         icon: 'ShieldCheck'
       },

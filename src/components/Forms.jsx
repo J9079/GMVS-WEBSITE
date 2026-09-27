@@ -77,7 +77,7 @@ export function ContactForm({ onNotify }) {
             <option value="General Inquiry">General Inquiry</option>
             <option value="CSR & Corporate Partnership">CSR &amp; Corporate Partnership</option>
             <option value="Institutional Grant / Philanthropy">Institutional Grant / Philanthropy</option>
-            <option value="80-G Tax Receipt Request">80-G Tax Receipt Request</option>
+            <option value="Donation Confirmation & Acknowledgment">Donation Confirmation &amp; Acknowledgment</option>
             <option value="Audited Financials / FCRA">Audited Financials / FCRA Info</option>
             <option value="Media & Research">Media &amp; Research Collaboration</option>
           </select>
@@ -235,10 +235,9 @@ export function VolunteerForm({ onNotify }) {
   );
 }
 
-export function ReceiptClaimForm({ onNotify }) {
+export function DonationConfirmationForm({ onNotify }) {
   const [formData, setFormData] = useState({
     name: '',
-    pan: '',
     email: '',
     phone: '',
     amount: '',
@@ -249,20 +248,13 @@ export function ReceiptClaimForm({ onNotify }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const cleanPan = formData.pan.trim().toUpperCase();
-    if (!cleanPan || cleanPan.length !== 10) {
-      onNotify('Valid 10-Digit PAN Required', 'Please enter a valid 10-character PAN number for Form 10BE filing.', 'warning');
-      return;
-    }
-
     onNotify(
-      '80-G Tax Certificate Request Logged',
-      'Thank you! Your donation details have been verified. Official Form 10BE will be dispatched to your email.',
+      'Donation Acknowledgment Logged',
+      'Thank you! Your donation details have been submitted. An official confirmation will be dispatched to your email.',
       'success'
     );
     setFormData({
       name: '',
-      pan: '',
       email: '',
       phone: '',
       amount: '',
@@ -276,40 +268,13 @@ export function ReceiptClaimForm({ onNotify }) {
     <form onSubmit={handleSubmit}>
       <div className="form-row">
         <div className="form-group">
-          <label className="form-label">Donor Full Name (as on PAN card) <span className="req">*</span></label>
+          <label className="form-label">Donor Full Name <span className="req">*</span></label>
           <input
             type="text"
             className="form-control"
             placeholder="e.g. Ramesh Kumar Verma"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label className="form-label">10-Digit PAN Number <span className="req">*</span></label>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="ABCDE1234F"
-            maxLength={10}
-            style={{ textTransform: 'uppercase', fontFamily: 'monospace' }}
-            value={formData.pan}
-            onChange={(e) => setFormData({ ...formData, pan: e.target.value.toUpperCase() })}
-            required
-          />
-        </div>
-      </div>
-
-      <div className="form-row">
-        <div className="form-group">
-          <label className="form-label">Email Address (for Certificate) <span className="req">*</span></label>
-          <input
-            type="email"
-            className="form-control"
-            placeholder="ramesh@example.com"
-            value={formData.email}
-            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             required
           />
         </div>
@@ -328,17 +293,31 @@ export function ReceiptClaimForm({ onNotify }) {
 
       <div className="form-row">
         <div className="form-group">
+          <label className="form-label">Email Address (for Receipt) <span className="req">*</span></label>
+          <input
+            type="email"
+            className="form-control"
+            placeholder="ramesh@example.com"
+            value={formData.email}
+            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+            required
+          />
+        </div>
+        <div className="form-group">
           <label className="form-label">Donation Amount (₹ INR) <span className="req">*</span></label>
           <input
             type="number"
             className="form-control"
             placeholder="10000"
-            min={500}
+            min={100}
             value={formData.amount}
             onChange={(e) => setFormData({ ...formData, amount: e.target.value })}
             required
           />
         </div>
+      </div>
+
+      <div className="form-row">
         <div className="form-group">
           <label className="form-label">Bank UTR / Transaction Ref No. <span className="req">*</span></label>
           <input
@@ -350,27 +329,42 @@ export function ReceiptClaimForm({ onNotify }) {
             required
           />
         </div>
+        <div className="form-group">
+          <label className="form-label">Supported Program</label>
+          <select
+            className="form-control"
+            value={formData.program}
+            onChange={(e) => setFormData({ ...formData, program: e.target.value })}
+          >
+            <option value="General & Where Needed Most">General &amp; Where Needed Most</option>
+            <option value="Women Empowerment & SHGs">Women Empowerment &amp; SHGs</option>
+            <option value="Child Education & Remedial Schools">Child Education &amp; Remedial Schools</option>
+            <option value="Water Harvesting (Taankas & Khadins)">Water Harvesting (Taankas &amp; Khadins)</option>
+            <option value="Healthcare & Free Eye Care">Healthcare &amp; Free Eye Care</option>
+          </select>
+        </div>
       </div>
 
       <div className="form-group">
-        <label className="form-label">Postal Address (for Form 10BE filing) <span className="req">*</span></label>
+        <label className="form-label">Postal Address</label>
         <textarea
           rows={2}
           className="form-control"
-          placeholder="Complete postal address with Pin Code..."
+          placeholder="City, State, and Pin Code..."
           value={formData.address}
           onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-          required
         />
       </div>
 
       <button type="submit" className="btn btn-primary btn-lg" style={{ width: '100%' }}>
         <FileCheck size={18} />
-        <span>Submit 80-G Receipt Claim</span>
+        <span>Submit Donation Details</span>
       </button>
     </form>
   );
 }
+
+export const ReceiptClaimForm = DonationConfirmationForm;
 
 export function CSRProposalForm({ onNotify }) {
   const [formData, setFormData] = useState({

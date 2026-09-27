@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initStickyHeader();
   initImpactCounters();
   initStoryFilters();
-  initTaxCalculator();
   initLeadershipModals();
   initVideoModals();
   initForms();
@@ -230,73 +229,10 @@ function initStoryFilters() {
 }
 
 /* ==========================================================================
-   5. Interactive 80-G Tax Exemption Calculator
+   5. Interactive Calculator (Neutralized)
    ========================================================================== */
 function initTaxCalculator() {
-  const inputField = document.getElementById('calc-donation-amount');
-  const presetPills = document.querySelectorAll('.preset-pill');
-  const taxSlabSelect = document.getElementById('calc-tax-slab');
-
-  const displayDonation = document.getElementById('calc-disp-donation');
-  const displayDeduction = document.getElementById('calc-disp-deduction');
-  const displayTaxSavings = document.getElementById('calc-disp-savings');
-  const displayNetCost = document.getElementById('calc-disp-netcost');
-  const impactNarrative = document.getElementById('calc-impact-narrative');
-
-  if (!inputField || !displayDonation) return;
-
-  function calculateTaxBenefit() {
-    let amount = parseFloat(inputField.value) || 0;
-    if (amount < 0) amount = 0;
-
-    const slab = parseFloat(taxSlabSelect?.value || '0.30'); // Default 30% tax bracket
-    const deduction = amount * 0.5; // 50% eligible deduction under Sec 80G
-    const taxSaved = deduction * slab;
-    const netCost = amount - taxSaved;
-
-    displayDonation.textContent = `₹${Math.round(amount).toLocaleString('en-IN')}`;
-    displayDeduction.textContent = `₹${Math.round(deduction).toLocaleString('en-IN')}`;
-    displayTaxSavings.textContent = `₹${Math.round(taxSaved).toLocaleString('en-IN')}`;
-    displayNetCost.textContent = `₹${Math.round(netCost).toLocaleString('en-IN')}`;
-
-    // Contextual Impact text
-    if (impactNarrative) {
-      if (amount >= 50000) {
-        impactNarrative.textContent = '🌟 Your contribution can construct a village rainwater recharge structure or empower a full 20-women SHG cluster with tailoring kits.';
-      } else if (amount >= 25000) {
-        impactNarrative.textContent = '💧 Your contribution helps build a traditional water harvesting tank (Khadin/Taanka) providing clean drinking water for a drought-hit family.';
-      } else if (amount >= 10000) {
-        impactNarrative.textContent = '📚 Supports 3 girl children with school supplies, uniforms, nutrition, and remedial tuition for an entire academic year.';
-      } else if (amount >= 5000) {
-        impactNarrative.textContent = '🩺 Funds 2 mother-and-child medical checkup camps in remote rural Panchayats of Ajmer.';
-      } else if (amount >= 2500) {
-        impactNarrative.textContent = '🧵 Provides vocational skill training materials and sewing accessories for 1 rural woman entrepreneur.';
-      } else {
-        impactNarrative.textContent = '🌱 Supports soil conservation and tree sapling plantation drive across Rajasthan village schools.';
-      }
-    }
-  }
-
-  // Handle preset clicks
-  presetPills.forEach(pill => {
-    pill.addEventListener('click', () => {
-      presetPills.forEach(p => p.classList.remove('active'));
-      pill.classList.add('active');
-      const val = pill.getAttribute('data-value');
-      inputField.value = val;
-      calculateTaxBenefit();
-    });
-  });
-
-  inputField.addEventListener('input', () => {
-    presetPills.forEach(p => p.classList.remove('active'));
-    calculateTaxBenefit();
-  });
-
-  taxSlabSelect?.addEventListener('change', calculateTaxBenefit);
-
-  // Initial calculation
-  calculateTaxBenefit();
+  // Tax calculator functionality removed per request
 }
 
 /* ==========================================================================
@@ -335,7 +271,7 @@ const leadershipBios = {
     quote: '“Every single rupee donated by our supporters must generate measurable, dignified, and lasting transformation at the grassroots level.”',
     bio: `At Gramin Mahila Vikas Sansthan (GMVS), financial transparency, accountability, and the efficient management of resources are given the highest institutional priority under Mr. Shambhu Singh Rawat.
     <br><br>
-    He ensures strict adherence to the principles of statutory compliance, including the Rajasthan Societies Registration Act, Foreign Contribution Regulation Act (FCRA), Income Tax exemptions under Section 12-AA and 80-G, and audited public filings.
+    He ensures strict adherence to the principles of statutory compliance, including the Rajasthan Societies Registration Act, Foreign Contribution Regulation Act (FCRA), NITI Aayog guidelines, and audited public filings.
     <br><br>
     His prudent stewardship has earned GMVS trust from international agencies (GIZ), national banks (ICICI, NABARD), and prominent philanthropic foundations (Tata Trusts, Hans Foundation).`
   },
@@ -535,17 +471,12 @@ function initForms() {
     });
   }
 
-  // 80-G Tax Receipt Claim Form
+  // Donation Confirmation Form
   const receiptForm = document.getElementById('gmvs-receipt-form');
   if (receiptForm) {
     receiptForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const pan = receiptForm.querySelector('[name="pan_number"]')?.value.trim();
-      if (!pan || pan.length !== 10) {
-        showToast('Valid PAN Required', 'Please enter a 10-digit PAN number for 80-G certificate filing.', 'warning');
-        return;
-      }
-      showToast('80-G Receipt Request Logged', 'Your donation confirmation has been noted. Official 80-G certificate will be emailed shortly.', 'success');
+      showToast('Donation Details Received', 'Thank you for your generous support! Your donation confirmation has been logged.', 'success');
       receiptForm.reset();
     });
   }

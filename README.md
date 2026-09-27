@@ -11,8 +11,7 @@ A modern, professional, fully responsive, and production-ready NGO web applicati
 
 - **Legal Registration:** Registered under Rajasthan Societies Registration Act No. 28 of 1958 (Registration No. **52 / Ajmer / 1998-99**, registered on 28th May 1998).
 - **FCRA Clearance:** Foreign Contribution Regulation Act Registration No. **125410040** (Ministry of Home Affairs, Government of India).
-- **Tax Exemptions:** Income Tax Act Section **12-AA** (Perpetual non-profit status) and Section **80-G** (50% Tax Deduction on donations with Form 10BE certificate).
-- **TAN Registration:** JDHG10077E
+- **Statutory Governance:** MCA Form CSR-1 Approved (Eligible Implementing Agency for Corporate Social Responsibility).
 - **NITI Aayog NGO Darpan:** Verified Registered Implementing Agency.
 - **Offices:**
   - **Head Office / Secretariat:** Village & Post Bubani, Via Gagwana, District Ajmer – 305023, Rajasthan.
@@ -37,16 +36,16 @@ A modern, professional, fully responsive, and production-ready NGO web applicati
      - **Contact**
    - **Glassmorphic Floating Header:** Translucent backdrop blur with smooth sticky elevation compression from 78px to 64px on scroll.
    - **Rich Mega-Menu Cards:** Dropdown cards with distinct category icons, micro-descriptions, and SDG alignment tags.
-   - **High-Contrast Glowing CTA:** "Donate (80-G)" pill button with subtle heart pulse animation.
+   - **High-Contrast Glowing CTA:** "Donate Now" pill button with subtle heart pulse animation.
    - **Language Toggle:** Instant English / हिन्दी preview switcher.
    - **Responsive Mobile Drawer:** Off-canvas sliding drawer with smooth backdrop blur, animated accordion sub-menus, and quick helpline access.
 
 2. **React 18 & Component Architecture:**
-   - **Interactive 80-G Tax Benefit Calculator:** Dynamic live recalculation of eligible deduction, estimated tax saved, and true net out-of-pocket cost with contextual impact narratives.
+   - **Grassroots Impact Highlights:** Mission-driven giving avenues and contextual community transformation narratives.
    - **Filterable Field Stories:** Real-time filtering across 9 authentic case studies (Women, Water, Education, Health, Livelihoods).
    - **Leadership Biographical Modal:** Dynamic modal drawer for Anil Kumar Mathur, Shankar Singh Rawat, Shambhu Singh Rawat, and Setha Singh Rawat.
    - **Animated Metric Counters:** Smooth ease-out count animation triggered by IntersectionObserver.
-   - **Validated Forms with Toast Notifications:** Contact Inquiry, Volunteer Application, CSR Proposal, and 80-G Receipt Claim form with 10-digit PAN validation.
+   - **Validated Forms with Toast Notifications:** Contact Inquiry, Volunteer Application, CSR Proposal, and Donation Confirmation form with instant feedback.
    - **Bank Account Cards:** One-click Copy-to-Clipboard with visual checkmark indicator and toast confirmation.
 
 ---
@@ -84,14 +83,14 @@ Open **`http://localhost:8000`** in your browser.
 GMVS Website/
 ├── src/
 │   ├── components/
-│   │   ├── TopBar.jsx            # Top announcement ribbon with 80-G and language toggle
+│   │   ├── TopBar.jsx            # Top announcement ribbon and language toggle
 │   │   ├── Navbar.jsx            # Glassmorphic header with rich mega-menu dropdowns
 │   │   ├── Footer.jsx            # Institutional footer with credentials & contacts
-│   │   ├── TaxCalculator.jsx     # Interactive 80-G tax deduction & savings calculator
+│   │   ├── TaxCalculator.jsx     # Neutralized placeholder component
 │   │   ├── LeadershipModal.jsx   # Full biographical modal drawer
 │   │   ├── FieldStories.jsx      # Filterable beneficiary case studies
 │   │   ├── BankCards.jsx         # Domestic SBI & Foreign FCRA cards with copy buttons
-│   │   ├── Forms.jsx             # Contact, Volunteer, CSR, and Receipt Claim forms
+│   │   ├── Forms.jsx             # Contact, Volunteer, CSR, and Donation Confirmation forms
 │   │   ├── ImpactCounters.jsx    # Animated numerical impact metrics
 │   │   └── Toast.jsx             # Floating animated notification toast
 │   ├── data/
@@ -99,7 +98,7 @@ GMVS Website/
 │   │   ├── leaders.js            # Executive board bios and quotes
 │   │   └── stories.js            # 9 authentic beneficiary case studies
 │   ├── pages/
-│   │   ├── HomePage.jsx          # Hero, counters, pillars, stories, calculator, partners
+│   │   ├── HomePage.jsx          # Hero, counters, pillars, stories, impact, partners
 │   │   ├── AboutPage.jsx         # History, vision, mission, legal table, organogram
 │   │   ├── ProgramsPage.jsx      # 5 thematic pillars & SDG mapping
 │   │   ├── LeadershipPage.jsx    # Board profiles & governance standards
@@ -107,7 +106,7 @@ GMVS Website/
 │   │   ├── PartnersPage.jsx      # Donor portfolio & CSR partnership portal
 │   │   ├── AwardsPage.jsx        # District Collector honour, Mann Ki Baat, audit reports
 │   │   ├── ContactPage.jsx       # Office directory, inquiry form, volunteer application
-│   │   └── DonatePage.jsx        # Dedicated 80-G giving portal & bank transfer cards
+│   │   └── DonatePage.jsx        # Dedicated giving portal & bank transfer cards
 │   ├── App.jsx                   # React Router DOM configuration & layout
 │   └── main.jsx                  # React application entry point
 ├── assets/
