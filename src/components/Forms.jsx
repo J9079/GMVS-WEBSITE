@@ -80,6 +80,7 @@ export function ContactForm({ onNotify }) {
             <option value="Donation Confirmation & Acknowledgment">Donation Confirmation &amp; Acknowledgment</option>
             <option value="Audited Financials / FCRA">Audited Financials / FCRA Info</option>
             <option value="Media & Research">Media &amp; Research Collaboration</option>
+            <option value="Other Inquiries & Feedback">Other Inquiries &amp; Feedback</option>
           </select>
         </div>
       </div>

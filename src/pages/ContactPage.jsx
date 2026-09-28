@@ -83,8 +83,8 @@ export default function ContactPage({ onNotify }) {
                 District Nagaur – 305624, Rajasthan, India
               </p>
               <div className="office-contact-links">
-                <a href="tel:+918107241463">
-                  <Phone size={15} /> +91-8107241463
+                <a href="tel:+919672979033">
+                  <Phone size={15} /> +91-9672979033
                 </a>
                 <a href="mailto:info@gmvs.org.in">
                   <Mail size={15} /> nagaur@gmvs.org.in
