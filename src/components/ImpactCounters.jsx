@@ -1,15 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Users, Landmark, MapPin, Droplets } from 'lucide-react';
+import { MapPin, Compass, Landmark, Home, Users } from 'lucide-react';
 
 const STATS = [
-  { id: 'ben', target: 85000, suffix: '+', label: 'Rural Lives Empowered', icon: Users },
-  { id: 'shg', target: 620, suffix: '+', label: 'Women SHGs Formed', icon: Landmark },
-  { id: 'vil', target: 250, suffix: '+', label: 'Villages Transformed', icon: MapPin },
-  { id: 'wat', target: 180, suffix: '+', label: 'Water Structures Built', icon: Droplets }
+  { id: 'state', target: 1, suffix: '', label: 'STATE COVERED', icon: MapPin },
+  { id: 'dist', target: 8, suffix: '', label: 'DISTRICTS COVERED', icon: Compass },
+  { id: 'panch', target: 1000, suffix: '+', label: 'PANCHAYATS REACHED', icon: Landmark },
+  { id: 'vil', target: 2500, suffix: '+', label: 'VILLAGES REACHED', icon: Home },
+  { id: 'ben', target: 1.7, suffix: 'M+', label: 'PEOPLE BENEFITED', icon: Users, isDecimal: true }
 ];
 
 export default function ImpactCounters() {
-  const [counts, setCounts] = useState({ ben: 0, shg: 0, vil: 0, wat: 0 });
+  const [counts, setCounts] = useState({ state: 0, dist: 0, panch: 0, vil: 0, ben: '0.0' });
   const [hasAnimated, setHasAnimated] = useState(false);
   const sectionRef = useRef(null);
 
@@ -27,16 +28,17 @@ export default function ImpactCounters() {
           const ease = 1 - Math.pow(1 - progress, 3);
 
           setCounts({
-            ben: Math.floor(ease * 85000),
-            shg: Math.floor(ease * 620),
-            vil: Math.floor(ease * 250),
-            wat: Math.floor(ease * 180)
+            state: Math.min(1, Math.floor(ease * 1 + 0.5)),
+            dist: Math.floor(ease * 8),
+            panch: Math.floor(ease * 1000),
+            vil: Math.floor(ease * 2500),
+            ben: (ease * 1.7).toFixed(1)
           });
 
           if (progress < 1) {
             requestAnimationFrame(animate);
           } else {
-            setCounts({ ben: 85000, shg: 620, vil: 250, wat: 180 });
+            setCounts({ state: 1, dist: 8, panch: 1000, vil: 2500, ben: '1.7' });
           }
         };
 
@@ -64,7 +66,7 @@ export default function ImpactCounters() {
                 </div>
                 <div className="stat-number-wrap">
                   <span className="stat-number">
-                    {counts[stat.id].toLocaleString('en-IN')}
+                    {typeof counts[stat.id] === 'number' ? counts[stat.id].toLocaleString('en-IN') : counts[stat.id]}
                   </span>
                   <span className="stat-suffix">{stat.suffix}</span>
                 </div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   ShieldCheck, Heart, ArrowRight, CheckCircle2, 
@@ -119,13 +119,20 @@ const PARTNERS = [
   { name: 'ICICI Bank', logo: 'assets/images/partner-icici-bank.png' },
   { name: 'GIZ Germany', logo: 'assets/images/partner-giz.png' },
   { name: 'The Hans Foundation', logo: 'assets/images/partner-hans-foundation.png' },
-  { name: 'Chola', logo: 'assets/images/partner-chola.png' },
-  { name: 'HLL Lifecare', logo: 'assets/images/partner-hll-lifecare.png' },
-  { name: 'Ray-Ban', logo: 'assets/images/partner-ray-ban.png' },
-  { name: 'Sightsavers', logo: 'assets/images/partner-sight-savers.png' },
+  { name: 'Cholamandalam (Chola)', logo: 'assets/images/partner-chola.png' },
+  { name: 'Government of India', logo: 'assets/images/partner-goi.png' },
   { name: 'NACO', logo: 'assets/images/partner-naco.png' },
+  { name: 'HLL Lifecare', logo: 'assets/images/partner-hll-lifecare.png' },
+  { name: 'Ray-Ban / EssilorLuxottica', logo: 'assets/images/partner-ray-ban.png' },
+  { name: 'Sightsavers', logo: 'assets/images/partner-sight-savers.png' },
   { name: 'RSACS', logo: 'assets/images/partner-rsacs.png' },
-  { name: 'Govt. of India', logo: 'assets/images/partner-goi.png' }
+  { name: 'Aravali', logo: 'assets/images/partner-aravali.png' },
+  { name: 'Central Social Welfare Board', logo: 'assets/images/partner-central-board.png' },
+  { name: 'Meenakshi Mission', logo: 'assets/images/partner-meenakshi-mission.png' },
+  { name: 'MSM', logo: 'assets/images/partner-msm.png' },
+  { name: 'PPDC', logo: 'assets/images/partner-ppdc.png' },
+  { name: 'CMF', logo: 'assets/images/partner-cmf.png' },
+  { name: 'Nisarg Foundation', logo: 'assets/images/partner-nisarg.png' }
 ];
 
 const TESTIMONIALS = [
@@ -172,6 +179,47 @@ const NEWS_UPDATES = [
 
 export default function HomePage({ lang, onNotify }) {
   const [activeAwardIndex, setActiveAwardIndex] = useState(0);
+
+  // Animated Counter Numbers (State, Districts, Panchayats, Villages, Beneficiaries)
+  const [counts, setCounts] = useState({ state: 0, dist: 0, panch: 0, vil: 0, ben: '0.0' });
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const counterRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting && !hasAnimated) {
+        setHasAnimated(true);
+        const duration = 2000;
+        const startTime = performance.now();
+
+        const animate = (currentTime) => {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const ease = 1 - Math.pow(1 - progress, 3);
+
+          setCounts({
+            state: Math.min(1, Math.floor(ease * 1 + 0.5)),
+            dist: Math.floor(ease * 8),
+            panch: Math.floor(ease * 1000),
+            vil: Math.floor(ease * 2500),
+            ben: (ease * 1.7).toFixed(1)
+          });
+
+          if (progress < 1) {
+            requestAnimationFrame(animate);
+          } else {
+            setCounts({ state: 1, dist: 8, panch: 1000, vil: 2500, ben: '1.7' });
+          }
+        };
+        requestAnimationFrame(animate);
+      }
+    }, { threshold: 0.25 });
+
+    if (counterRef.current) {
+      observer.observe(counterRef.current);
+    }
+    return () => observer.disconnect();
+  }, [hasAnimated]);
 
   // Auto-cycle through showcase awards every 5 seconds
   useEffect(() => {
@@ -431,30 +479,34 @@ export default function HomePage({ lang, onNotify }) {
       </section>
 
       {/* 7. Milestone Impact Numbers Counter Band (edu-counterup) */}
-      <section className="section-sm bg-surface-subtle">
+      <section ref={counterRef} className="section-sm bg-surface-subtle">
         <div className="container">
           <div className="edu-counter-grid">
             <div className="edu-counterup primary-color">
-              <h3>50,000+</h3>
-              <p className="counter-label">Lives Impacted</p>
+              <h3>{hasAnimated ? counts.state : 1}</h3>
+              <p className="counter-label">STATE COVERED</p>
             </div>
             <div className="edu-counterup secondary-color">
-              <h3>14,500+</h3>
-              <p className="counter-label">Women Empowered</p>
+              <h3>{hasAnimated ? counts.dist : 8}</h3>
+              <p className="counter-label">DISTRICTS COVERED</p>
             </div>
             <div className="edu-counterup extra02-color">
-              <h3>180+</h3>
-              <p className="counter-label">Taankas Built</p>
+              <h3>{hasAnimated ? counts.panch.toLocaleString('en-IN') : '1,000'}+</h3>
+              <p className="counter-label">PANCHAYATS REACHED</p>
             </div>
             <div className="edu-counterup extra05-color">
-              <h3>₹25+ Cr</h3>
-              <p className="counter-label">Credit Mobilised</p>
+              <h3>{hasAnimated ? counts.vil.toLocaleString('en-IN') : '2,500'}+</h3>
+              <p className="counter-label">VILLAGES REACHED</p>
+            </div>
+            <div className="edu-counterup extra03-color">
+              <h3>{hasAnimated ? counts.ben : '1.7'}M+</h3>
+              <p className="counter-label">PEOPLE BENEFITED</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 8. Institutional Partners (Our Partners) */}
+      {/* 8. Institutional Partners (Our Partners - Moving Right to Left in One Row) */}
       <section className="section-sm bg-surface-subtle">
         <div className="container">
           <div className="section-header">
@@ -464,21 +516,31 @@ export default function HomePage({ lang, onNotify }) {
               Working in close alliance with prestigious national foundations, government bodies, and corporate CSR programs.
             </p>
           </div>
+        </div>
 
-          <div className="partners-grid">
+        {/* Partners Right-to-Left Continuous Single-Row Marquee */}
+        <div className="partners-marquee-container" aria-label="Our Partners marquee">
+          <div className="partners-marquee-track">
+            {/* First sequence of partner cards */}
             {PARTNERS.map((p, i) => (
-              <div key={i} className="partner-card" title={p.name}>
-                <img src={p.logo} alt={p.name} />
+              <div key={`p1-${i}`} className="partner-marquee-card" title={p.name}>
+                <img src={p.logo} alt={p.name} loading="lazy" />
+              </div>
+            ))}
+            {/* Duplicate sequence for seamless continuous infinite marquee */}
+            {PARTNERS.map((p, i) => (
+              <div key={`p2-${i}`} className="partner-marquee-card" title={p.name} aria-hidden="true">
+                <img src={p.logo} alt={p.name} loading="lazy" />
               </div>
             ))}
           </div>
+        </div>
 
-          <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
-            <Link to="/partners" className="btn01 btn01-outline">
-              <span>View Full Partner Ecosystem</span>
-              <ArrowRight size={14} />
-            </Link>
-          </div>
+        <div className="container" style={{ textAlign: 'center', marginTop: '2rem' }}>
+          <Link to="/partners" className="btn01 btn01-outline">
+            <span>View Full Partner Ecosystem</span>
+            <ArrowRight size={14} />
+          </Link>
         </div>
       </section>
 
