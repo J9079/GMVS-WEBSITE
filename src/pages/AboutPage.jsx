@@ -95,7 +95,7 @@ export default function AboutPage() {
             <p className="section-subtitle">Our guiding compass ensuring dignity, equity, and sustainability in every village intervention.</p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '2rem' }}>
             {/* Vision */}
             <div style={{ background: '#FFFFFF', borderRadius: 'var(--radius-xl)', padding: '2.5rem', border: '1px solid var(--border-light)', boxShadow: 'var(--shadow-sm)' }}>
               <div style={{ width: '50px', height: '50px', borderRadius: 'var(--radius-md)', background: 'var(--primary-subtle)', color: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.25rem' }}>
@@ -144,8 +144,8 @@ export default function AboutPage() {
             <p className="section-subtitle">Fully verified and compliant with all Indian statutory and regulatory authorities.</p>
           </div>
 
-          <div style={{ maxWidth: '880px', margin: '0 auto', background: '#FFFFFF', borderRadius: 'var(--radius-xl)', border: '1px solid var(--border-light)', overflow: 'hidden', boxShadow: 'var(--shadow-sm)' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.95rem' }}>
+          <div className="table-responsive" style={{ maxWidth: '880px', margin: '0 auto', background: '#FFFFFF', borderRadius: 'var(--radius-xl)', border: '1px solid var(--border-light)', boxShadow: 'var(--shadow-sm)' }}>
+            <table style={{ width: '100%', minWidth: '580px', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.95rem' }}>
               <thead>
                 <tr style={{ background: 'var(--bg-surface-subtle)', borderBottom: '2px solid var(--border-color)' }}>
                   <th style={{ padding: '1rem 1.5rem', color: 'var(--text-main)', fontWeight: 700 }}>Statutory Authority</th>

@@ -17,12 +17,12 @@ export default function LeadershipModal({ leader, onClose }) {
         </button>
 
         <div className="modal-content">
-          <div style={{ display: 'flex', gap: '2rem', alignItems: 'flex-start', flexWrap: 'wrap' }}>
-            <div style={{ width: '150px', height: '150px', borderRadius: '50%', overflow: 'hidden', border: '4px solid var(--primary-subtle)', flexShrink: 0, margin: '0 auto' }}>
+          <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'flex-start', flexWrap: 'wrap' }}>
+            <div style={{ width: '130px', height: '130px', borderRadius: '50%', overflow: 'hidden', border: '4px solid var(--primary-subtle)', flexShrink: 0, margin: '0 auto' }}>
               <img src={leader.image} alt={leader.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
 
-            <div style={{ flex: 1, minWidth: '260px' }}>
+            <div style={{ flex: '1 1 240px', minWidth: 0 }}>
               <span className="badge-tag" style={{ marginBottom: '0.4rem', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
                 <Award size={12} /> {leader.tenure}
               </span>

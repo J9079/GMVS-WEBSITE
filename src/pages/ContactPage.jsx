@@ -101,7 +101,7 @@ export default function ContactPage({ onNotify }) {
       {/* Forms & Map Grid */}
       <section className="section bg-surface-subtle">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '3rem', alignItems: 'flex-start' }}>
+          <div className="contact-main-grid">
             {/* Contact Form */}
             <div className="form-card">
               <span className="badge-tag" style={{ marginBottom: '0.5rem' }}>Send a Message</span>

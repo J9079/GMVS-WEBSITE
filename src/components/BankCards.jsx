@@ -20,7 +20,7 @@ export default function BankCards({ onCopyToast }) {
       <div className="bank-card featured">
         <div className="bank-header">
           <div className="bank-title-wrap">
-            <h4 style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <h4 style={{ display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap' }}>
               <Building2 size={20} style={{ color: 'var(--primary)' }} />
               Indian Donors &bull; SBI Account
             </h4>
@@ -101,7 +101,7 @@ export default function BankCards({ onCopyToast }) {
       <div className="bank-card">
         <div className="bank-header">
           <div className="bank-title-wrap">
-            <h4 style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <h4 style={{ display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap' }}>
               <Globe size={20} style={{ color: 'var(--secondary)' }} />
               International Donors &bull; FCRA Account
             </h4>
