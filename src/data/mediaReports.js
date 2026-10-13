@@ -6,8 +6,8 @@ export const MEDIA_REPORTS = [
     source: 'Dainik Bhaskar / Rajasthan Patrika Coverage',
     tag: 'Ecology & Environment',
     date: 'Field Initiative Coverage',
-    image: 'assets/images/media/paudharopan-karyakram-ayojit-.jpeg',
-    thumb: 'assets/images/media/thumb/paudharopan-karyakram-ayojit-.jpeg',
+    image: '/assets/images/media/paudharopan-karyakram-ayojit-.jpeg',
+    thumb: '/assets/images/media/thumb/paudharopan-karyakram-ayojit-.jpeg',
     summary: 'GMVS led a massive environmental plantation drive involving village youth, women SHGs, and local school students, planting native drought-hardy and fruit-bearing trees across common lands.',
     highlights: 'Community Participation • Environmental Stewardship • School Engagement'
   },
@@ -18,8 +18,8 @@ export const MEDIA_REPORTS = [
     source: 'Regional Press Bureau',
     tag: 'Institutional Honour',
     date: 'Community Felicitation',
-    image: 'assets/images/media/gramin-vikas-sansthan-bubani-sammanit.jpeg',
-    thumb: 'assets/images/media/thumb/gramin-vikas-sansthan-bubani-sammanit.jpeg',
+    image: '/assets/images/media/gramin-vikas-sansthan-bubani-sammanit.jpeg',
+    thumb: '/assets/images/media/thumb/gramin-vikas-sansthan-bubani-sammanit.jpeg',
     summary: 'State and district dignitaries felicitated Gramin Mahila Vikas Sansthan (GMVS) Bubani for pioneering multi-sectoral community development, girl child education, and women micro-credit.',
     highlights: 'District Commendation • 25+ Years Service • Women Empowerment'
   },
@@ -30,8 +30,8 @@ export const MEDIA_REPORTS = [
     source: 'District Daily Coverage',
     tag: 'Digital Literacy',
     date: 'Public Awareness Campaign',
-    image: 'assets/images/media/cyber-aparadhon-ke-prati-kiya-jagrook.jpeg',
-    thumb: 'assets/images/media/thumb/cyber-aparadhon-ke-prati-kiya-jagrook.jpeg',
+    image: '/assets/images/media/cyber-aparadhon-ke-prati-kiya-jagrook.jpeg',
+    thumb: '/assets/images/media/thumb/cyber-aparadhon-ke-prati-kiya-jagrook.jpeg',
     summary: 'GMVS organised hands-on digital literacy and cyber safety seminars for rural adolescents, women SHGs, and panchayat representatives to safeguard villagers from online financial frauds.',
     highlights: 'Cyber Security • Rural Digital Literacy • Women Financial Safety'
   },
@@ -42,8 +42,8 @@ export const MEDIA_REPORTS = [
     source: 'Rural Enterprise Bureau',
     tag: 'Women Enterprise',
     date: 'Livelihood Milestone',
-    image: 'assets/images/media/nimeda-gaon-men-sangini-utpadan-kendra-ka-udghatan.jpeg',
-    thumb: 'assets/images/media/thumb/nimeda-gaon-men-sangini-utpadan-kendra-ka-udghatan.jpeg',
+    image: '/assets/images/media/nimeda-gaon-men-sangini-utpadan-kendra-ka-udghatan.jpeg',
+    thumb: '/assets/images/media/thumb/nimeda-gaon-men-sangini-utpadan-kendra-ka-udghatan.jpeg',
     summary: 'Inauguration of the Sangini micro-enterprise production unit in Nimeda village, equipping village women with manufacturing machinery, fair wages, and affordable menstrual hygiene products.',
     highlights: 'Local Livelihoods • Women-Led Manufacturing • Menstrual Hygiene'
   },
@@ -54,8 +54,8 @@ export const MEDIA_REPORTS = [
     source: 'State Media Bureau',
     tag: 'Leadership Award',
     date: 'Distinguished Honour',
-    image: 'assets/images/media/samajik-karyon-ke-lie-rawat-sammanit.jpeg',
-    thumb: 'assets/images/media/thumb/samajik-karyon-ke-lie-rawat-sammanit.jpeg',
+    image: '/assets/images/media/samajik-karyon-ke-lie-rawat-sammanit.jpeg',
+    thumb: '/assets/images/media/thumb/samajik-karyon-ke-lie-rawat-sammanit.jpeg',
     summary: 'GMVS Secretary Shankar Singh Rawat was honoured by civic bodies for his steadfast leadership in water conservation (Taanka building), school re-enrolment for girls, and village self-reliance.',
     highlights: 'Founder Leadership • Social Dedication • Water & Education Champion'
   },
@@ -66,8 +66,8 @@ export const MEDIA_REPORTS = [
     source: 'Arogya News Service',
     tag: 'Rural Health',
     date: 'Medical Outreach',
-    image: 'assets/images/media/shivir-me-100-logon-ki-swasthya-jaanch.jpeg',
-    thumb: 'assets/images/media/thumb/shivir-me-100-logon-ki-swasthya-jaanch.jpeg',
+    image: '/assets/images/media/shivir-me-100-logon-ki-swasthya-jaanch.jpeg',
+    thumb: '/assets/images/media/thumb/shivir-me-100-logon-ki-swasthya-jaanch.jpeg',
     summary: 'A comprehensive free general health and eye examination camp conducted by GMVS medical teams, providing vital diagnostic tests, free essential medicines, and cataract surgery referrals.',
     highlights: '100+ Beneficiaries • Free Medicines • Specialist Doctor Consultations'
   },
@@ -78,8 +78,8 @@ export const MEDIA_REPORTS = [
     source: 'Gramin Vikas Patrika',
     tag: 'Skill Training',
     date: 'Vocational Centre Launch',
-    image: 'assets/images/media/silai-prashikshak-kendra-ka-udghatan.jpeg',
-    thumb: 'assets/images/media/thumb/silai-prashikshak-kendra-ka-udghatan.jpeg',
+    image: '/assets/images/media/silai-prashikshak-kendra-ka-udghatan.jpeg',
+    thumb: '/assets/images/media/thumb/silai-prashikshak-kendra-ka-udghatan.jpeg',
     summary: 'Launch of an advanced multi-machine vocational tailoring workshop by GMVS, enabling rural young women to attain certified garment construction skills and earn independently.',
     highlights: 'Vocational Skills • Sewing Machines • Economic Independence'
   }

@@ -5,7 +5,7 @@ export const STORIES = [
     tag: 'Livelihoods & Animal Husbandry',
     title: 'Goat Rearing Leads to Enhanced Income & Dignity',
     quote: '“Joining the GMVS livelihood cluster and raising Sirohi goats changed everything. Today we have financial stability and my daughter attends college without stress.”',
-    image: 'assets/images/stories/goat-rearing-leads-to-enhanced-income.jpg',
+    image: '/assets/images/stories/goat-rearing-leads-to-enhanced-income.jpg',
     body: 'Rukma Devi is a 40-year-old resident of Khayda village in Bhinai tehsil, Ajmer district. Her household faced severe economic stress through informal dryland wage labour. With GMVS livestock development intervention, she received high-yield Sirohi breed goats and veterinary deworming guidance, expanding her herd and tripling her annual disposable income.',
     beneficiary: {
       name: 'Rukma Devi',
@@ -19,7 +19,7 @@ export const STORIES = [
     tag: 'Women Enterprise & Skills',
     title: 'Hopeful of Taking Tailoring Full-Time',
     quote: '“The GMVS sewing center taught me professional pattern cutting and blouse tailoring. I now take commercial stitching orders and plan to open my own boutique.”',
-    image: 'assets/images/stories/hopeful-of-taking-tailoring-full-time.jpg',
+    image: '/assets/images/stories/hopeful-of-taking-tailoring-full-time.jpg',
     body: 'Faced with limited livelihood avenues in rural Rajasthan, she joined GMVS’s certified garment production workshop. Mastering modern stitch finishing and pattern assembly, she transitioned from irregular home chores into a respected micro-entrepreneur serving customers across 5 neighboring villages.',
     beneficiary: {
       name: 'Santosh Rawat',
@@ -33,7 +33,7 @@ export const STORIES = [
     tag: 'Child Rights & Girl Child Schooling',
     title: 'Dreams of a Bright Future: From Dropout to Secondary Scholar',
     quote: '“I thought my education had ended forever. GMVS brought me to the remedial center, gave me textbooks and stationery, and helped me rejoin school with confidence.”',
-    image: 'assets/images/stories/dreams-of-bright-future.jpg',
+    image: '/assets/images/stories/dreams-of-bright-future.jpg',
     body: 'Ganga, aged 15, is the daughter of Ram Chandra residing at Bubani in Ajmer district. Severe economic duress had forced her out of the formal schooling system. GMVS child mobilisers counseled her family, provided 8 months of bridging remedial coursework, and successfully enrolled her into Class 10 where she excels today.',
     beneficiary: {
       name: 'Ganga Rawat',
@@ -47,7 +47,7 @@ export const STORIES = [
     tag: 'Jal Shakti & Drinking Water Security',
     title: 'Ending Miles of Daily Water Fetching with Rainwater Taanka',
     quote: '“Earlier, I spent four hours daily walking under the scorching desert sun for two pots of salty water. Our GMVS Taanka stores pure sweet nectar right at our doorstep.”',
-    image: 'assets/images/gallery/agriculture/pg-45.jpeg',
+    image: '/assets/images/gallery/agriculture/pg-45.jpeg',
     body: 'In drought-prone rural Rajasthan, women historically spent several hours daily trudging long distances for drinking water. With GMVS Jal Shakti support, Hagami Devi’s family built a traditional 25,000-litre domestic rooftop rainwater harvesting Taanka, securing drinking water through the driest summer months.',
     beneficiary: {
       name: 'Hagami Devi',
@@ -61,7 +61,7 @@ export const STORIES = [
     tag: 'Rural Health & Free Cataract Surgeries',
     title: 'Regaining Vision at Age 68 Through Mobile Eye Clinic',
     quote: '“I was completely blind in both eyes from mature cataracts and felt like a burden to my family. After the GMVS surgery, I can see my grandchildren’s smiling faces clearly.”',
-    image: 'assets/images/gallery/health/pg-48.jpeg',
+    image: '/assets/images/gallery/health/pg-48.jpeg',
     body: 'In partnership with specialized ophthalmic institutions and Sightsavers, GMVS conducts regular mobile eye screening camps in interior villages. Chanta Devi received free transport, diagnostic workup, cataract extraction, and intraocular lens implantation, restoring full vision.',
     beneficiary: {
       name: 'Chanta Devi',
@@ -75,7 +75,7 @@ export const STORIES = [
     tag: 'Child Education & Digital Literacy',
     title: 'Breaking the Cycle of Generational Illiteracy',
     quote: '“My father never went to school. Through GMVS remedial learning classes, I mastered mathematics and computer basics. I dream of becoming a teacher.”',
-    image: 'assets/images/gallery/miscellaneous/pg-26.jpeg',
+    image: '/assets/images/gallery/miscellaneous/pg-26.jpeg',
     body: 'Rinku experienced severe foundational learning gaps in a remote village school. After 18 months of intensive coaching at GMVS’s community education centre, he topped his school examinations and now mentors younger first-generation learners in his hamlet.',
     beneficiary: {
       name: 'Rinku Kumar',
@@ -89,7 +89,7 @@ export const STORIES = [
     tag: 'Grassroots Women Leadership',
     title: 'From Veiled Homemaker to Village Panchayat Leader',
     quote: '“Before GMVS, I couldn’t speak up in front of village elders. The leadership training taught me my legal rights, and now I lead discussions in our Gram Sabha.”',
-    image: 'assets/images/gallery/women/pg-51.jpeg',
+    image: '/assets/images/gallery/women/pg-51.jpeg',
     body: 'Jhoomi Devi evolved from an isolated rural homemaker into a respected civic leader after participating in GMVS’s civic rights, Panchayati Raj governance, and women leadership training modules. Today she mobilises hundreds of women for local governance audits.',
     beneficiary: {
       name: 'Jhoomi Devi',
@@ -103,7 +103,7 @@ export const STORIES = [
     tag: 'Soil Conservation & Water Harvesting',
     title: 'Reviving Barren Farmland with Contour Bunding & Khadins',
     quote: '“Monsoon rains used to wash away our fertile topsoil. With GMVS watershed bunds, moisture is conserved and our wheat harvest doubled.”',
-    image: 'assets/images/gallery/agriculture/pg-10.jpeg',
+    image: '/assets/images/gallery/agriculture/pg-10.jpeg',
     body: 'Guranath struggled with erratic rainfall and extreme soil erosion on his 5 bighas of land. GMVS’s natural resource management team built earthen check structures and contour bunds across community catchment zones, recharging the local water table and doubling crop yields.',
     beneficiary: {
       name: 'Guranath',

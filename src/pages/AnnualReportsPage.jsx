@@ -22,6 +22,51 @@ const DECADE_FILTERS = [
   { id: '1990s', label: 'Foundational (1997–2000)' }
 ];
 
+function ReportCoverImage({ report, style }) {
+  const [src, setSrc] = useState(report.cover);
+  const [failed, setFailed] = useState(false);
+
+  const handleError = () => {
+    if (src !== report.remoteCover && report.remoteCover) {
+      setSrc(report.remoteCover);
+    } else {
+      setFailed(true);
+    }
+  };
+
+  if (failed) {
+    return (
+      <div style={{
+        width: '100%',
+        height: '100%',
+        background: 'linear-gradient(135deg, #0A2610 0%, #133E1A 100%)',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '1.5rem',
+        color: '#FFFFFF',
+        textAlign: 'center'
+      }}>
+        <img src="/assets/images/logo-white.png" alt="GMVS" style={{ height: '32px', marginBottom: '1rem', objectFit: 'contain' }} />
+        <span style={{ fontSize: '1.3rem', fontWeight: 800, color: '#FEF3C7', marginBottom: '0.5rem' }}>FY {report.year}</span>
+        <h4 style={{ fontSize: '0.9rem', color: '#FFFFFF', margin: 0, lineHeight: 1.4, fontWeight: 600 }}>{report.title}</h4>
+      </div>
+    );
+  }
+
+  return (
+    <img
+      src={src}
+      alt={report.title}
+      referrerPolicy="no-referrer"
+      loading="lazy"
+      style={style}
+      onError={handleError}
+    />
+  );
+}
+
 export default function AnnualReportsPage({ onNotify }) {
   const [selectedDecade, setSelectedDecade] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
@@ -172,21 +217,14 @@ export default function AnnualReportsPage({ onNotify }) {
                   onClick={() => setPreviewReport(report)}
                   title="Click to view cover preview"
                 >
-                  <img
-                    src={report.cover}
-                    alt={report.title}
-                    referrerPolicy="no-referrer"
-                    loading="lazy"
+                  <ReportCoverImage
+                    report={report}
                     style={{
                       width: '100%',
                       height: '100%',
                       objectFit: 'cover',
                       objectPosition: 'top',
                       transition: 'transform 0.4s ease'
-                    }}
-                    onError={(e) => {
-                      // Fallback placeholder styling
-                      e.currentTarget.style.display = 'none';
                     }}
                   />
                   {/* Badge */}
@@ -387,10 +425,8 @@ export default function AnnualReportsPage({ onNotify }) {
 
             {/* Modal Image Body */}
             <div style={{ padding: '1rem', backgroundColor: '#0F172A', textAlign: 'center' }}>
-              <img
-                src={previewReport.cover}
-                alt={previewReport.title}
-                referrerPolicy="no-referrer"
+              <ReportCoverImage
+                report={previewReport}
                 style={{
                   maxHeight: '65vh',
                   maxWidth: '100%',

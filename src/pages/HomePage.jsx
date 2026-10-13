@@ -12,28 +12,28 @@ const AWARDS_SHOWCASE = [
     badge: "State & District Honour",
     title: "Honoured with Ajmer District Level Honour by District Collector for Grassroots Social Excellence",
     desc: "Recognised by the Rajasthan State Administration and District Collectorate for over 28 years of tireless grassroots service in women empowerment, child protection, and community development.",
-    image: "assets/images/hero-slide-1.jpg",
+    image: "/assets/images/hero-slide-1.jpg",
     link: "/awards"
   },
   {
     badge: "National Commendation",
     title: "Commended by Hon'ble PM Narendra Modi in Mann Ki Baat (Ep. 92) for Women Apparel Cluster DARJI ONLINE",
     desc: "National commendation on Mann Ki Baat highlighting GMVS board member Setha Singh Rawat and rural women artisans transforming traditional sewing skills into sustainable livelihoods.",
-    image: "assets/images/hero-slide-2.jpg",
+    image: "/assets/images/hero-slide-2.jpg",
     link: "/leadership"
   },
   {
     badge: "Water Conservation Milestone",
     title: "Constructed 180+ Traditional Rainwater Harvesting Taankas & Khadins across Drought-Prone Hamlets",
     desc: "Revitalising indigenous Aravalli water wisdom to provide reliable drinking water and year-round moisture security to vulnerable rural families.",
-    image: "assets/images/nrm.jpg",
+    image: "/assets/images/nrm.jpg",
     link: "/programs#nrm"
   },
   {
     badge: "Transformative Partnership",
     title: "Scaling Women's Collectives with RAJEEVIKA, NABARD, and Tata Trusts across Rajasthan",
     desc: "Mobilising over 620 Self-Help Groups into self-governing village federations, financial credit networks, and women-owned micro-enterprises.",
-    image: "assets/images/women-empowerment.jpg",
+    image: "/assets/images/women-empowerment.jpg",
     link: "/partners"
   }
 ];
@@ -43,28 +43,28 @@ const FEATURED_STORIES = [
     tag: "Women Enterprise",
     title: "Sewing a New Life: Santosh Devi's Journey from Grief to Enterprise",
     excerpt: "After sudden bereavement, Santosh Devi rebuilt her family's future through GMVS tailoring collective, now mentoring 35 rural women.",
-    image: "assets/images/story-santosh-devi.jpg",
+    image: "/assets/images/stories/hopeful-of-taking-tailoring-full-time.jpg",
     link: "/stories"
   },
   {
     tag: "Water Harvesting",
     title: "Revitalising Taanka Wisdom: Bringing Safe Water to Parched Aravalli Hamlets",
     excerpt: "Traditional rainwater Taankas constructed by GMVS now harvest over 3.6 million litres annually, freeing women from 4km daily water walks.",
-    image: "assets/images/nrm.jpg",
+    image: "/assets/images/nrm.jpg",
     link: "/stories"
   },
   {
     tag: "Child Protection",
     title: "Mainstreaming 4,800+ Rural Children from Brick Kilns into Formal Schools",
     excerpt: "Community learning centres and nutrition support have helped first-generation rural girls complete secondary school with dignity.",
-    image: "assets/images/child-rights.jpg",
+    image: "/assets/images/child-rights.jpg",
     link: "/stories"
   },
   {
     tag: "Livelihoods",
     title: "Economic Dignity Through Sirohi Goat Rearing & Micro-Credit Collectives",
     excerpt: "Scientific breed improvement and door-to-door veterinary clinics have doubled household incomes for over 3,200 pastoral families.",
-    image: "assets/images/community-development.jpg",
+    image: "/assets/images/community-development.jpg",
     link: "/stories"
   }
 ];
@@ -73,42 +73,42 @@ const MANJARI_PROGRAMS = [
   {
     id: "women-institutions",
     title: "Women's Institutions & SHGs",
-    image: "assets/images/women-empowerment.jpg",
+    image: "/assets/images/women-empowerment.jpg",
     text: "Committed to empowering women from marginalised communities through 620+ Self-Help Groups, village federations, leadership training, and financial autonomy.",
     link: "/programs#women-empowerment"
   },
   {
     id: "enhancing-livelihoods",
     title: "Enhancing Livelihoods & Livestock",
-    image: "assets/images/community-development.jpg",
+    image: "/assets/images/community-development.jpg",
     text: "Promoting sustainable income generation through Sirohi goat rearing cooperatives, organic agriculture, value addition, and direct market linkage.",
     link: "/programs#community-development"
   },
   {
     id: "quality-education",
     title: "Quality Child Education",
-    image: "assets/images/child-rights.jpg",
+    image: "/assets/images/child-rights.jpg",
     text: "Eradicating child labour, running remedial learning centres in remote hamlets, and ensuring 100% retention for rural girl children in secondary schools.",
     link: "/programs#child-rights"
   },
   {
     id: "wash-nrm",
     title: "Water, Sanitation & Hygiene (WASH)",
-    image: "assets/images/nrm.jpg",
+    image: "/assets/images/nrm.jpg",
     text: "Constructing traditional rainwater Taankas, check dams, and Khadins to resolve drinking water scarcity and recharge groundwater across Rajasthan.",
     link: "/programs#nrm"
   },
   {
     id: "health-nutrition",
     title: "Health, Nutrition & Eye Care",
-    image: "assets/images/health-concerns.jpg",
+    image: "/assets/images/health-concerns.jpg",
     text: "Providing mobile medical outreach, maternal and child healthcare, nutrition counseling, and over 32,000 free eye screenings and cataract surgeries.",
     link: "/programs#health-concerns"
   },
   {
     id: "social-enterprises",
     title: "Social Enterprises & Youth Skills",
-    image: "assets/images/hero-slide-2.jpg",
+    image: "/assets/images/hero-slide-2.jpg",
     text: "Empowering rural youth and women with market-driven skills, vocational tailoring clusters (DARJI ONLINE), and micro-enterprise development.",
     link: "/programs#women-empowerment"
   }
