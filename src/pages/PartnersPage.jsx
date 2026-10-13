@@ -2,26 +2,7 @@ import React from 'react';
 import { CSRProposalForm } from '../components/Forms';
 import { ShieldCheck, Building2, CheckCircle2 } from 'lucide-react';
 
-const ALL_PARTNERS = [
-  { name: 'Tata Trusts', logo: 'assets/images/partner-tata-trusts.png' },
-  { name: 'NABARD', logo: 'assets/images/partner-nabard.png' },
-  { name: 'ICICI Bank', logo: 'assets/images/partner-icici-bank.png' },
-  { name: 'GIZ Germany', logo: 'assets/images/partner-giz.png' },
-  { name: 'The Hans Foundation', logo: 'assets/images/partner-hans-foundation.png' },
-  { name: 'Chola', logo: 'assets/images/partner-chola.png' },
-  { name: 'HLL Lifecare', logo: 'assets/images/partner-hll-lifecare.png' },
-  { name: 'Ray-Ban', logo: 'assets/images/partner-ray-ban.png' },
-  { name: 'Sightsavers', logo: 'assets/images/partner-sight-savers.png' },
-  { name: 'NACO', logo: 'assets/images/partner-naco.png' },
-  { name: 'RSACS', logo: 'assets/images/partner-rsacs.png' },
-  { name: 'Govt. of India', logo: 'assets/images/partner-goi.png' },
-  { name: 'Aravali', logo: 'assets/images/partner-aravali.png' },
-  { name: 'CMF', logo: 'assets/images/partner-cmf.png' },
-  { name: 'Meenakshi Mission', logo: 'assets/images/partner-meenakshi-mission.png' },
-  { name: 'Nisarg Foundation', logo: 'assets/images/partner-nisarg.png' },
-  { name: 'PPDC', logo: 'assets/images/partner-ppdc.png' },
-  { name: 'Central Board', logo: 'assets/images/partner-central-board.png' }
-];
+import { PARTNERS } from '../data/partners';
 
 export default function PartnersPage({ onNotify }) {
   return (
@@ -44,14 +25,25 @@ export default function PartnersPage({ onNotify }) {
           <div className="section-header">
             <span className="badge-tag">Valued Partners</span>
             <h2>Our Institutional Funding Alliances</h2>
-            <p className="section-subtitle">A heritage of trust, transparent financial reporting, and impactful delivery.</p>
+            <p className="section-subtitle">
+              A heritage of trust, transparent financial reporting, and impactful delivery. Click any partner to visit their official website.
+            </p>
           </div>
 
           <div className="partners-grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))' }}>
-            {ALL_PARTNERS.map((p, i) => (
-              <div key={i} className="partner-card" title={p.name} style={{ filter: 'none', opacity: 1 }}>
+            {PARTNERS.map((p, i) => (
+              <a 
+                key={i} 
+                href={p.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="partner-card" 
+                title={`Visit ${p.name} official website (${p.url})`}
+                aria-label={`Visit ${p.name} official website`}
+                style={{ filter: 'none', opacity: 1, textDecoration: 'none' }}
+              >
                 <img src={p.logo} alt={p.name} />
-              </div>
+              </a>
             ))}
           </div>
         </div>

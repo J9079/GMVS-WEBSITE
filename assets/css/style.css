@@ -1782,6 +1782,8 @@ p {
   transition: all var(--transition-normal);
   filter: grayscale(100%);
   opacity: 0.85;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .partner-card:hover {
@@ -1847,6 +1849,8 @@ p {
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   filter: grayscale(100%);
   opacity: 0.85;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .partner-marquee-card:hover {

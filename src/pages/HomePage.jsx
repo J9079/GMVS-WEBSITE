@@ -5,6 +5,7 @@ import {
   Users, Landmark, Compass, Award, Droplets, 
   GraduationCap, HeartHandshake, Stethoscope, Sparkles, ChevronRight
 } from 'lucide-react';
+import { PARTNERS } from '../data/partners';
 
 const AWARDS_SHOWCASE = [
   {
@@ -111,28 +112,6 @@ const MANJARI_PROGRAMS = [
     text: "Empowering rural youth and women with market-driven skills, vocational tailoring clusters (DARJI ONLINE), and micro-enterprise development.",
     link: "/programs#women-empowerment"
   }
-];
-
-const PARTNERS = [
-  { name: 'Tata Trusts', logo: 'assets/images/partner-tata-trusts.png' },
-  { name: 'NABARD', logo: 'assets/images/partner-nabard.png' },
-  { name: 'ICICI Bank', logo: 'assets/images/partner-icici-bank.png' },
-  { name: 'GIZ Germany', logo: 'assets/images/partner-giz.png' },
-  { name: 'The Hans Foundation', logo: 'assets/images/partner-hans-foundation.png' },
-  { name: 'Cholamandalam (Chola)', logo: 'assets/images/partner-chola.png' },
-  { name: 'Government of India', logo: 'assets/images/partner-goi.png' },
-  { name: 'NACO', logo: 'assets/images/partner-naco.png' },
-  { name: 'HLL Lifecare', logo: 'assets/images/partner-hll-lifecare.png' },
-  { name: 'Ray-Ban / EssilorLuxottica', logo: 'assets/images/partner-ray-ban.png' },
-  { name: 'Sightsavers', logo: 'assets/images/partner-sight-savers.png' },
-  { name: 'RSACS', logo: 'assets/images/partner-rsacs.png' },
-  { name: 'Aravali', logo: 'assets/images/partner-aravali.png' },
-  { name: 'Central Social Welfare Board', logo: 'assets/images/partner-central-board.png' },
-  { name: 'Meenakshi Mission', logo: 'assets/images/partner-meenakshi-mission.png' },
-  { name: 'MSM', logo: 'assets/images/partner-msm.png' },
-  { name: 'PPDC', logo: 'assets/images/partner-ppdc.png' },
-  { name: 'CMF', logo: 'assets/images/partner-cmf.png' },
-  { name: 'Nisarg Foundation', logo: 'assets/images/partner-nisarg.png' }
 ];
 
 const TESTIMONIALS = [
@@ -513,7 +492,7 @@ export default function HomePage({ lang, onNotify }) {
             <span className="badge-tag">Institutional Support</span>
             <h2>Our Partners</h2>
             <p className="section-subtitle">
-              Working in close alliance with prestigious national foundations, government bodies, and corporate CSR programs.
+              Working in close alliance with prestigious national foundations, government bodies, and corporate CSR programs. Click any partner to visit their official website.
             </p>
           </div>
         </div>
@@ -523,15 +502,32 @@ export default function HomePage({ lang, onNotify }) {
           <div className="partners-marquee-track">
             {/* First sequence of partner cards */}
             {PARTNERS.map((p, i) => (
-              <div key={`p1-${i}`} className="partner-marquee-card" title={p.name}>
+              <a
+                key={`p1-${i}`}
+                href={p.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="partner-marquee-card"
+                title={`Visit ${p.name} official website (${p.url})`}
+                aria-label={`Visit ${p.name} official website`}
+              >
                 <img src={p.logo} alt={p.name} loading="lazy" />
-              </div>
+              </a>
             ))}
             {/* Duplicate sequence for seamless continuous infinite marquee */}
             {PARTNERS.map((p, i) => (
-              <div key={`p2-${i}`} className="partner-marquee-card" title={p.name} aria-hidden="true">
+              <a
+                key={`p2-${i}`}
+                href={p.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="partner-marquee-card"
+                title={`Visit ${p.name} official website (${p.url})`}
+                aria-label={`Visit ${p.name} official website`}
+                tabIndex={-1}
+              >
                 <img src={p.logo} alt={p.name} loading="lazy" />
-              </div>
+              </a>
             ))}
           </div>
         </div>
