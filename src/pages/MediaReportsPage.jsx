@@ -1,10 +1,30 @@
 import React, { useState } from 'react';
 import { MEDIA_REPORTS } from '../data/mediaReports';
-import { Newspaper, ZoomIn, X, ExternalLink, Calendar, CheckCircle2, FileText, ArrowRight } from 'lucide-react';
+import { Newspaper, ZoomIn, X, ExternalLink, Calendar, CheckCircle2, FileText, ArrowRight, Play, Youtube } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
+const VIDEO_DOCUMENTARIES = [
+  {
+    id: "4jR9QkrvPWM",
+    title: "VYK Training | Feedback from Gramin Mahila Vikas Sansthan",
+    tag: "Ground Voices",
+    desc: "Ms. Gayatri Sukhwal shares her experience on capacity building, village youth empowerment, and rural development frameworks implemented by GMVS in Rajasthan.",
+    image: "/assets/images/hero-slide-4.jpg",
+    youtubeUrl: "https://www.youtube.com/watch?v=4jR9QkrvPWM"
+  },
+  {
+    id: "elQeWMV9Jmg",
+    title: "Jal Shakti Mission: Saving Water, Reviving Communities",
+    tag: "Success Story",
+    desc: "Success story of rain harvesting structures constructed by GMVS in water-scarce villages of Ajmer, replenishing the local water table and securing drinking water.",
+    image: "/assets/images/hero-slide-7.jpg",
+    youtubeUrl: "https://www.youtube.com/watch?v=elQeWMV9Jmg"
+  }
+];
 
 export default function MediaReportsPage({ onNotify }) {
   const [activeClip, setActiveClip] = useState(null);
+  const [activeVideo, setActiveVideo] = useState(null);
 
   const handlePreview = (item) => {
     setActiveClip(item);
@@ -188,6 +208,148 @@ export default function MediaReportsPage({ onNotify }) {
         </div>
       </section>
 
+      {/* Video Coverage & Documentaries Section */}
+      <section className="section bg-surface-subtle" style={{ borderTop: '1px solid #E2E8F0' }}>
+        <div className="container">
+          <div className="section-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '1rem', marginBottom: '2.5rem' }}>
+            <div>
+              <span className="badge-tag tag-secondary" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                <Youtube size={15} color="#DC2626" />
+                <span>Video Coverage &bull; Ground Documentaries</span>
+              </span>
+              <h2>Impact in Action: Video Documentaries</h2>
+              <p className="section-subtitle" style={{ margin: 0 }}>
+                Authentic ground footage and firsthand beneficiary interviews from GMVS programmes in Rajasthan.
+              </p>
+            </div>
+            <a 
+              href="https://www.youtube.com/@gmvs_ajmer" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn btn-outline btn-sm"
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
+            >
+              <Youtube size={16} color="#DC2626" />
+              <span>Official YouTube Channel (@gmvs_ajmer)</span>
+              <ExternalLink size={14} />
+            </a>
+          </div>
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
+            gap: '2rem'
+          }}>
+            {VIDEO_DOCUMENTARIES.map((video) => (
+              <div
+                key={video.id}
+                style={{
+                  background: '#FFFFFF',
+                  borderRadius: '16px',
+                  overflow: 'hidden',
+                  border: '1px solid #E2E8F0',
+                  boxShadow: '0 4px 14px rgba(0,0,0,0.06)',
+                  display: 'flex',
+                  flexDirection: 'column'
+                }}
+              >
+                <div 
+                  style={{
+                    position: 'relative',
+                    height: '240px',
+                    backgroundColor: '#000000',
+                    cursor: 'pointer',
+                    overflow: 'hidden'
+                  }}
+                  onClick={() => setActiveVideo(video)}
+                >
+                  <img
+                    src={video.image}
+                    alt={video.title}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      opacity: 0.82,
+                      transition: 'transform 0.4s ease'
+                    }}
+                  />
+                  {/* Play Button Overlay */}
+                  <div style={{
+                    position: 'absolute',
+                    inset: 0,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    background: 'rgba(0, 0, 0, 0.25)'
+                  }}>
+                    <div style={{
+                      width: '60px',
+                      height: '60px',
+                      borderRadius: '50%',
+                      backgroundColor: '#DC2626',
+                      color: '#FFFFFF',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      boxShadow: '0 8px 24px rgba(220, 38, 38, 0.5)'
+                    }}>
+                      <Play size={24} fill="currentColor" style={{ marginLeft: '3px' }} />
+                    </div>
+                  </div>
+                  {/* Tag Pill */}
+                  <span style={{
+                    position: 'absolute',
+                    bottom: '1rem',
+                    left: '1rem',
+                    backgroundColor: 'rgba(0, 0, 0, 0.75)',
+                    color: '#FFFFFF',
+                    padding: '0.3rem 0.75rem',
+                    borderRadius: '6px',
+                    fontSize: '0.75rem',
+                    fontWeight: 600,
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '5px'
+                  }}>
+                    <Youtube size={12} color="#EF4444" />
+                    <span>YouTube &bull; {video.tag}</span>
+                  </span>
+                </div>
+
+                <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                  <h4 style={{ fontSize: '1.15rem', marginBottom: '0.65rem', lineHeight: 1.4, color: '#0F172A' }}>
+                    {video.title}
+                  </h4>
+                  <p style={{ fontSize: '0.9rem', color: '#64748B', lineHeight: 1.6, flexGrow: 1, marginBottom: '1.25rem' }}>
+                    {video.desc}
+                  </p>
+                  <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+                    <button
+                      type="button"
+                      className="btn btn-primary btn-sm"
+                      onClick={() => setActiveVideo(video)}
+                    >
+                      <Play size={14} fill="currentColor" style={{ marginRight: '5px' }} />
+                      <span>Watch Video</span>
+                    </button>
+                    <a
+                      href={video.youtubeUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-outline btn-sm"
+                    >
+                      <span>Open on YouTube</span>
+                      <ExternalLink size={13} style={{ marginLeft: '4px' }} />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Cross-linking to Stories & Annual Reports */}
       <section className="section-sm bg-surface-subtle" style={{ borderTop: '1px solid #E2E8F0' }}>
         <div className="container">
@@ -305,6 +467,118 @@ export default function MediaReportsPage({ onNotify }) {
                 >
                   Close
                 </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Video Lightbox Modal */}
+      {activeVideo && (
+        <div
+          style={{
+            position: 'fixed',
+            inset: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.88)',
+            zIndex: 99999,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '1rem',
+            backdropFilter: 'blur(6px)'
+          }}
+          onClick={() => setActiveVideo(null)}
+        >
+          <div
+            style={{
+              backgroundColor: '#0F172A',
+              borderRadius: '16px',
+              maxWidth: '850px',
+              width: '100%',
+              overflow: 'hidden',
+              boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.6)',
+              position: 'relative',
+              border: '1px solid #334155'
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              padding: '1rem 1.5rem',
+              backgroundColor: '#1E293B',
+              borderBottom: '1px solid #334155'
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+                <Youtube size={18} color="#EF4444" />
+                <h4 style={{ margin: 0, fontSize: '1rem', color: '#FFFFFF', fontWeight: 600 }}>
+                  {activeVideo.title}
+                </h4>
+              </div>
+              <button
+                type="button"
+                onClick={() => setActiveVideo(null)}
+                aria-label="Close video"
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  color: '#94A3B8',
+                  cursor: 'pointer',
+                  padding: '4px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  borderRadius: '6px'
+                }}
+              >
+                <X size={22} />
+              </button>
+            </div>
+
+            {/* Video Iframe Container (Responsive 16:9) */}
+            <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, background: '#000000' }}>
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${activeVideo.id}?autoplay=1&rel=0`}
+                title={activeVideo.title}
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  border: 0
+                }}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+
+            {/* Modal Footer */}
+            <div style={{
+              padding: '1rem 1.5rem',
+              backgroundColor: '#1E293B',
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              flexWrap: 'wrap',
+              gap: '0.75rem'
+            }}>
+              <p style={{ margin: 0, fontSize: '0.85rem', color: '#94A3B8', maxWidth: '550px' }}>
+                {activeVideo.desc}
+              </p>
+              <div style={{ display: 'flex', gap: '0.5rem' }}>
+                <a
+                  href={activeVideo.youtubeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary btn-sm"
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+                >
+                  <ExternalLink size={13} />
+                  <span>Watch on YouTube</span>
+                </a>
               </div>
             </div>
           </div>

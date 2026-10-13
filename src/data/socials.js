@@ -2,8 +2,8 @@ export const SOCIAL_LINKS = [
   {
     id: 'youtube',
     name: 'YouTube',
-    handle: '@gmvs_official',
-    url: 'https://youtube.com/@gmvs_official?si=AQ_XLjcn8jLeBcN-',
+    handle: '@gmvs_ajmer',
+    url: 'https://www.youtube.com/@gmvs_ajmer',
     badgeText: 'Watch on YouTube',
     className: 'youtube'
   },
