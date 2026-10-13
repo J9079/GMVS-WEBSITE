@@ -124,6 +124,7 @@ export default function AwardsPage({ onNotify }) {
                   <img 
                     src={award.image} 
                     alt={award.title} 
+                    referrerPolicy="no-referrer"
                     loading="lazy"
                     onError={(e) => {
                       if (award.fallbackImage && e.currentTarget.src !== award.fallbackImage) {
@@ -354,6 +355,7 @@ export default function AwardsPage({ onNotify }) {
               <img
                 src={selectedAward.image}
                 alt={selectedAward.title}
+                referrerPolicy="no-referrer"
                 style={{
                   maxHeight: '65vh',
                   maxWidth: '100%',

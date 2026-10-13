@@ -137,21 +137,21 @@ const NEWS_UPDATES = [
     date: "Press Report • Ecology",
     title: "पौधारोपण कार्यक्रम आयोजित: Mega Afforestation Campaign across Ajmer",
     excerpt: "GMVS mobilized rural youth, women collectives, and school students to plant drought-hardy shade and fruit trees across community commons.",
-    image: "https://gmvs.org.in/wp-content/uploads/photo-gallery/media/thumb/paudharopan-karyakram-ayojit-.jpeg?bwg=1759831083",
+    image: "assets/images/media/thumb/paudharopan-karyakram-ayojit-.jpeg",
     link: "/media-reports"
   },
   {
     date: "Livelihoods • Women Enterprise",
     title: "निमेड़ा गांव में संगिनी उत्पादन केंद्र का उद्घाटन: Sangini Production Unit",
     excerpt: "Inauguration of the Sangini livelihood and sanitary pad production facility in Nimeda village, generating daily employment for local rural women.",
-    image: "https://gmvs.org.in/wp-content/uploads/photo-gallery/media/thumb/nimeda-gaon-men-sangini-utpadan-kendra-ka-udghatan.jpeg?bwg=1759831083",
+    image: "assets/images/media/thumb/nimeda-gaon-men-sangini-utpadan-kendra-ka-udghatan.jpeg",
     link: "/media-reports"
   },
   {
     date: "Rural Health • Medical Outreach",
     title: "शिविर में 100 लोगों की स्वास्थ्य जांच: Free Health & Eye Diagnostic Camp",
     excerpt: "Free general health and eye screening camp by GMVS medical teams, providing vital diagnostics, free medicines, and cataract surgery referrals.",
-    image: "https://gmvs.org.in/wp-content/uploads/photo-gallery/media/thumb/shivir-me-100-logon-ki-swasthya-jaanch.jpeg?bwg=1759831083",
+    image: "assets/images/media/thumb/shivir-me-100-logon-ki-swasthya-jaanch.jpeg",
     link: "/media-reports"
   }
 ];

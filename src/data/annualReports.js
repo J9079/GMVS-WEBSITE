@@ -5,7 +5,7 @@ export const ANNUAL_REPORTS = [
     decade: '2020s',
     title: 'Annual Progress & Audited Report 2024-25',
     tag: 'Latest Audit',
-    cover: 'https://gmvs.org.in/wp-content/uploads/2026/06/annual-report-2024-25-724x1024.jpg',
+    cover: 'assets/images/reports/annual-report-2024-25.jpg',
     highlights: 'Audited CA Financials • Form 10B & FCRA Return Compliant • Women Apparel Clusters & Water Taankas',
     theme: 'Integrated Grassroots Resilience & Women Empowerment',
     pages: '48 Pages'
@@ -16,7 +16,7 @@ export const ANNUAL_REPORTS = [
     decade: '2020s',
     title: 'Annual Report 2023-24: Conserving Every Drop, Empowering Every Hand',
     tag: 'Audited CA',
-    cover: 'https://gmvs.org.in/wp-content/uploads/2025/10/annual-report-2023-24-816x1024.jpg',
+    cover: 'assets/images/reports/annual-report-2023-24.jpg',
     highlights: 'Statutory Filing Complete • Focus: Jal Shakti, Taanka Construction & SHG Micro-Enterprises',
     theme: 'Jal Shakti & Rural Livelihood Expansion',
     pages: '52 Pages'
@@ -27,7 +27,7 @@ export const ANNUAL_REPORTS = [
     decade: '2020s',
     title: 'Annual Report 2022-23: Silver Jubilee Milestone (1998–2023)',
     tag: 'Silver Jubilee',
-    cover: 'https://gmvs.org.in/wp-content/uploads/2025/10/annual-report-2022-23-816x1024.jpeg',
+    cover: 'assets/images/reports/annual-report-2022-23.jpeg',
     highlights: 'Celebrating 25 Years of Community Governance • Recognition across 8 Districts of Rajasthan',
     theme: '25 Years of Institutional Governance & Impact',
     pages: '56 Pages'
@@ -38,7 +38,7 @@ export const ANNUAL_REPORTS = [
     decade: '2020s',
     title: 'Annual Report 2021-22: Resilience, Health Security & Rural Livelihoods',
     tag: 'Audited CA',
-    cover: 'https://gmvs.org.in/wp-content/uploads/2025/10/annual-report-2021-22-816x1024.jpeg',
+    cover: 'assets/images/reports/annual-report-2021-22.jpeg',
     highlights: 'Audited Balance Sheet & Expenditure • Mobile Medical Clinics & Rural Relief Outreach',
     theme: 'Health Security & Post-Pandemic Revival',
     pages: '44 Pages'
@@ -49,7 +49,7 @@ export const ANNUAL_REPORTS = [
     decade: '2020s',
     title: 'Annual Report 2020-21: Grassroots Humanitarian Response & SHG Solidarity',
     tag: 'Emergency Relief',
-    cover: 'https://gmvs.org.in/wp-content/uploads/2025/10/annual-report-2020-21-816x1024.jpeg',
+    cover: 'assets/images/reports/annual-report-2020-21.jpeg',
     highlights: 'Full CA Audit Certificate • Dry Ration, Hygiene Kits & Rural Emergency Relief',
     theme: 'Humanitarian Outreach & Community Care',
     pages: '40 Pages'
@@ -60,7 +60,7 @@ export const ANNUAL_REPORTS = [
     decade: '2010s',
     title: 'Annual Report 2019-20: Sustainable Soil & Water Harvesting Initiatives',
     tag: 'NRM & Ecology',
-    cover: 'https://gmvs.org.in/wp-content/uploads/2025/10/annual-report-2019-20-816x1024.jpeg',
+    cover: 'assets/images/reports/annual-report-2019-20.jpeg',
     highlights: 'Watershed Bunding, Khadins, and Afforestation in Aravalli Foothills',
     theme: 'Ecological Restoration & Watershed Management',
     pages: '38 Pages'
@@ -71,7 +71,7 @@ export const ANNUAL_REPORTS = [
     decade: '2010s',
     title: 'Annual Report 2018-19: Strengthening Women SHG Banking Federations',
     tag: 'Micro-Finance',
-    cover: 'https://gmvs.org.in/wp-content/uploads/2025/10/annual-report-2018-19-816x1024.jpeg',
+    cover: 'assets/images/reports/annual-report-2018-19.jpeg',
     highlights: 'NABARD SHG-Bank Linkage • Over 500 Active Self Help Groups Mobilized',
     theme: 'Financial Inclusion & Micro-Enterprise Federation',
     pages: '36 Pages'
@@ -82,7 +82,7 @@ export const ANNUAL_REPORTS = [
     decade: '2010s',
     title: 'Annual Report 2017-18: Quality Remedial Education & Girl Child Rights',
     tag: 'Education',
-    cover: 'https://gmvs.org.in/wp-content/uploads/2025/10/annual-report-2017-18-816x1024.jpeg',
+    cover: 'assets/images/reports/annual-report-2017-18.jpeg',
     highlights: 'Bridging Learning Deficits • Safe Learning Centers for Rural Children',
     theme: 'Child Rights & Inclusive Rural Learning',
     pages: '36 Pages'
@@ -93,7 +93,7 @@ export const ANNUAL_REPORTS = [
     decade: '2010s',
     title: 'Annual Report 2016-17: Community Health Camps & Maternal Care',
     tag: 'Health Care',
-    cover: 'https://gmvs.org.in/wp-content/uploads/2025/10/annual-report-2016-17-816x1024.jpeg',
+    cover: 'assets/images/reports/annual-report-2016-17.jpeg',
     highlights: 'Cataract Surgeries with Sightsavers & Mobile Health Testing Units',
     theme: 'Preventive Healthcare & Blindness Eradication',
     pages: '34 Pages'
@@ -104,7 +104,7 @@ export const ANNUAL_REPORTS = [
     decade: '2010s',
     title: 'Annual Report 2015-16: Sirohi Goat Rearing & Livestock Livelihoods',
     tag: 'Livelihoods',
-    cover: 'https://gmvs.org.in/wp-content/uploads/2025/10/annual-report-2015-16-816x1024.jpeg',
+    cover: 'assets/images/reports/annual-report-2015-16.jpeg',
     highlights: 'Breed Improvement & Veterinary Vaccination for Landless Families',
     theme: 'Animal Husbandry & Income Security',
     pages: '32 Pages'
@@ -115,7 +115,7 @@ export const ANNUAL_REPORTS = [
     decade: '2010s',
     title: 'Annual Report 2014-15: Grassroots Democratic Leadership & Gram Sabha',
     tag: 'Civic Rights',
-    cover: 'https://gmvs.org.in/wp-content/uploads/2025/10/annual-report-2014-15-816x1024.jpeg',
+    cover: 'assets/images/reports/annual-report-2014-15.jpeg',
     highlights: 'Capacity Building for Elected Women Representatives in Panchayati Raj',
     theme: 'Decentralised Governance & Citizen Participation',
     pages: '32 Pages'
@@ -126,7 +126,7 @@ export const ANNUAL_REPORTS = [
     decade: '2010s',
     title: 'Annual Report 2013-14: Rural Sanitation, Hygiene & Clean Water',
     tag: 'Sanitation',
-    cover: 'https://gmvs.org.in/wp-content/uploads/2025/10/annual-report-2013-14-816x1024.jpeg',
+    cover: 'assets/images/reports/annual-report-2013-14.jpeg',
     highlights: 'Household Toilet Construction & Community Water Management Committees',
     theme: 'WASH & Community Well-Being',
     pages: '30 Pages'
@@ -137,7 +137,7 @@ export const ANNUAL_REPORTS = [
     decade: '2010s',
     title: 'Annual Report 2012-13: Empowering Artisans Through Vocational Skills',
     tag: 'Skill Training',
-    cover: 'https://gmvs.org.in/wp-content/uploads/2025/10/annual-report-2012-13-816x1024.jpeg',
+    cover: 'assets/images/reports/annual-report-2012-13.jpeg',
     highlights: 'Tailoring, Embroidery, and Handicrafts Training for Rural Young Women',
     theme: 'Skill Development & Micro-Enterprise',
     pages: '30 Pages'
@@ -148,7 +148,7 @@ export const ANNUAL_REPORTS = [
     decade: '2010s',
     title: 'Annual Report 2011-12: Watershed Regeneration & Pastureland Development',
     tag: 'NRM',
-    cover: 'https://gmvs.org.in/wp-content/uploads/2025/10/annual-report-2011-12-816x1024.jpeg',
+    cover: 'assets/images/reports/annual-report-2011-12.jpeg',
     highlights: 'Gully Plugging, Anicuts, and Fodder Security for Pastoralist Herders',
     theme: 'Ecological Regeneration & Commons Management',
     pages: '28 Pages'
@@ -159,7 +159,7 @@ export const ANNUAL_REPORTS = [
     decade: '2010s',
     title: 'Annual Report 2010-11: Scaling Impact Across Central Rajasthan',
     tag: 'Expansion',
-    cover: 'https://gmvs.org.in/wp-content/uploads/2025/10/annual-report-2010-11-816x1024.jpeg',
+    cover: 'assets/images/reports/annual-report-2010-11.jpeg',
     highlights: 'Outreach to 500+ Gram Panchayats with Multi-Stakeholder Partnerships',
     theme: 'Institutional Growth & Strategic Alliances',
     pages: '28 Pages'
@@ -170,7 +170,7 @@ export const ANNUAL_REPORTS = [
     decade: '2000s',
     title: 'Annual Report 2009-10: Mobilising Marginalised Communities',
     tag: 'Social Justice',
-    cover: 'https://gmvs.org.in/wp-content/uploads/2025/10/annual-report-2009-10-816x1024.jpeg',
+    cover: 'assets/images/reports/annual-report-2009-10.jpeg',
     highlights: 'Tribal Community Rights & Livelihood Protection in Remote Blocks',
     theme: 'Equity, Inclusion & Grassroots Solidarity',
     pages: '26 Pages'
@@ -181,7 +181,7 @@ export const ANNUAL_REPORTS = [
     decade: '2000s',
     title: 'Annual Report 2008-09: Institutional Milestones in Rural Development',
     tag: 'Milestone',
-    cover: 'https://gmvs.org.in/wp-content/uploads/2025/10/annual-report-2008-09-816x1024.jpeg',
+    cover: 'assets/images/reports/annual-report-2008-09.jpeg',
     highlights: 'Decade Celebration of Village Self-Help Cooperatives',
     theme: 'A Decade of Collective Action',
     pages: '26 Pages'
@@ -192,7 +192,7 @@ export const ANNUAL_REPORTS = [
     decade: '2000s',
     title: 'Annual Report 2007-08: Health Awareness & HIV/AIDS Prevention Outreach',
     tag: 'Public Health',
-    cover: 'https://gmvs.org.in/wp-content/uploads/2025/10/annual-report-2007-08-816x1024.jpeg',
+    cover: 'assets/images/reports/annual-report-2007-08.jpeg',
     highlights: 'Collaboration with NACO and RSACS for High-Risk Rural Clusters',
     theme: 'Targeted Health Interventions',
     pages: '24 Pages'
@@ -203,7 +203,7 @@ export const ANNUAL_REPORTS = [
     decade: '2000s',
     title: 'Annual Report 2006-07: Enhancing Women Literacy & Adult Learning',
     tag: 'Literacy',
-    cover: 'https://gmvs.org.in/wp-content/uploads/2025/10/annual-report-2006-07-816x1024.jpeg',
+    cover: 'assets/images/reports/annual-report-2006-07.jpeg',
     highlights: 'Functional Literacy Centers across Ajmer and Nagaur Districts',
     theme: 'Adult Education & Legal Literacy',
     pages: '24 Pages'
@@ -214,7 +214,7 @@ export const ANNUAL_REPORTS = [
     decade: '2000s',
     title: 'Annual Report 2005-06: Drinking Water Security via Traditional Taankas',
     tag: 'Water Security',
-    cover: 'https://gmvs.org.in/wp-content/uploads/2025/10/annual-report-2005-06-816x1024.jpeg',
+    cover: 'assets/images/reports/annual-report-2005-06.jpeg',
     highlights: 'Revitalising Centuries-Old Indigenous Rainwater Harvesting Systems',
     theme: 'Traditional Wisdom & Water Security',
     pages: '22 Pages'
@@ -225,7 +225,7 @@ export const ANNUAL_REPORTS = [
     decade: '2000s',
     title: 'Annual Report 2004-05: Child Labour Remediation & School Enrolment',
     tag: 'Child Rights',
-    cover: 'https://gmvs.org.in/wp-content/uploads/2025/10/annual-report-2004-05-816x1024.jpeg',
+    cover: 'assets/images/reports/annual-report-2004-05.jpeg',
     highlights: 'Mainstreaming 1,200+ Out-of-School Children into Formal Classrooms',
     theme: 'Education as Fundamental Right',
     pages: '22 Pages'
@@ -236,7 +236,7 @@ export const ANNUAL_REPORTS = [
     decade: '2000s',
     title: 'Annual Report 2003-04: Building Grassroots Women Cooperatives',
     tag: 'Cooperatives',
-    cover: 'https://gmvs.org.in/wp-content/uploads/2025/10/annual-report-2003-04-816x1024.jpeg',
+    cover: 'assets/images/reports/annual-report-2003-04.jpeg',
     highlights: 'Establishing Village-Level Thrift and Credit Societies',
     theme: 'Community Savings & Credit Freedom',
     pages: '20 Pages'
@@ -247,7 +247,7 @@ export const ANNUAL_REPORTS = [
     decade: '2000s',
     title: 'Annual Report 2002-03: Drought Relief & Humanitarian Response',
     tag: 'Relief',
-    cover: 'https://gmvs.org.in/wp-content/uploads/2025/10/annual-report-2002-03-816x1024.jpeg',
+    cover: 'assets/images/reports/annual-report-2002-03.jpeg',
     highlights: 'Cattle Camps, Water Tanker Supply & Food Security During Severe Aridity',
     theme: 'Disaster Relief & Climate Resilience',
     pages: '20 Pages'
@@ -258,7 +258,7 @@ export const ANNUAL_REPORTS = [
     decade: '2000s',
     title: 'Annual Report 2001-02: Self-Help Groups as Pillars of Rural Transformation',
     tag: 'SHG Foundation',
-    cover: 'https://gmvs.org.in/wp-content/uploads/2025/10/annual-report-2001-02-816x1024.jpeg',
+    cover: 'assets/images/reports/annual-report-2001-02.jpeg',
     highlights: 'Initial Cluster of 150 SHGs Achieving 100% Repayment Track Record',
     theme: 'Foundational SHG Mobilization',
     pages: '18 Pages'
@@ -269,7 +269,7 @@ export const ANNUAL_REPORTS = [
     decade: '2000s',
     title: 'Annual Report 2000-01: Consolidation of Village Development Committees',
     tag: 'Governance',
-    cover: 'https://gmvs.org.in/wp-content/uploads/2025/10/annual-report-2000-01-816x1024.jpeg',
+    cover: 'assets/images/reports/annual-report-2000-01.jpeg',
     highlights: 'Participatory Rural Appraisal (PRA) Exercises across 30 Hamlets',
     theme: 'Participatory Planning & Grassroots Democracy',
     pages: '18 Pages'
@@ -280,7 +280,7 @@ export const ANNUAL_REPORTS = [
     decade: '1990s',
     title: 'Foundational Triennial Report 1997-2000: Genesis of GMVS',
     tag: 'Historic Genesis',
-    cover: 'https://gmvs.org.in/wp-content/uploads/2025/10/annual-report-1997-00-816x1024.jpeg',
+    cover: 'assets/images/reports/annual-report-1997-00.jpeg',
     highlights: 'Institutional Inception, Society Registration under Act 28, 1958 & First Village Surveys',
     theme: 'Founding Charter & Grassroots Vision',
     pages: '24 Pages'

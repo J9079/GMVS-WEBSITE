@@ -78,6 +78,7 @@ export default function MediaReportsPage({ onNotify }) {
                   <img
                     src={report.image}
                     alt={report.titleHindi}
+                    referrerPolicy="no-referrer"
                     loading="lazy"
                     style={{
                       width: '100%',
@@ -273,6 +274,7 @@ export default function MediaReportsPage({ onNotify }) {
               <img
                 src={activeClip.image}
                 alt={activeClip.titleHindi}
+                referrerPolicy="no-referrer"
                 style={{
                   maxWidth: '100%',
                   height: 'auto',

@@ -175,6 +175,7 @@ export default function AnnualReportsPage({ onNotify }) {
                   <img
                     src={report.cover}
                     alt={report.title}
+                    referrerPolicy="no-referrer"
                     loading="lazy"
                     style={{
                       width: '100%',
@@ -389,6 +390,7 @@ export default function AnnualReportsPage({ onNotify }) {
               <img
                 src={previewReport.cover}
                 alt={previewReport.title}
+                referrerPolicy="no-referrer"
                 style={{
                   maxHeight: '65vh',
                   maxWidth: '100%',

@@ -93,6 +93,7 @@ export default function GalleryPage({ onNotify }) {
                   <img
                     src={item.image}
                     alt={item.title}
+                    referrerPolicy="no-referrer"
                     loading="lazy"
                     style={{
                       width: '100%',
@@ -258,6 +259,7 @@ export default function GalleryPage({ onNotify }) {
               <img
                 src={activePhoto.image}
                 alt={activePhoto.title}
+                referrerPolicy="no-referrer"
                 style={{
                   maxHeight: '64vh',
                   maxWidth: '100%',
