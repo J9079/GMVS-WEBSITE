@@ -96,15 +96,27 @@ export const NAV_LINKS = [
       },
       {
         title: 'Awards & Honours',
-        desc: 'District Collector Honour & Tribal Festival citation',
+        desc: 'District Collector Honour & 9 State/National citations',
         path: '/awards',
         icon: 'Award'
       },
       {
         title: 'Audited Annual Reports',
-        desc: 'Public financial balance sheets & CA filings',
-        path: '/awards#reports',
-        icon: 'FileSpreadsheet'
+        desc: 'Complete archives of 26 reports from 1997 to 2025',
+        path: '/annual-reports',
+        icon: 'FileText'
+      },
+      {
+        title: 'Photo Gallery',
+        desc: 'Authentic ground photographs across 4 key sectors',
+        path: '/gallery',
+        icon: 'Camera'
+      },
+      {
+        title: 'Media & Press Reports',
+        desc: 'Regional newspaper clippings & public news coverage',
+        path: '/media-reports',
+        icon: 'Newspaper'
       }
     ]
   },

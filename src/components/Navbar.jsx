@@ -3,7 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 import { 
   ChevronDown, Menu, X, Heart, Landmark, Compass, Users, 
   ShieldCheck, GitFork, HeartHandshake, GraduationCap, 
-  Droplets, Stethoscope, Sprout, BookOpen, Award, FileSpreadsheet, PhoneCall
+  Droplets, Stethoscope, Sprout, BookOpen, Award, FileSpreadsheet, PhoneCall,
+  Camera, Newspaper, FileText
 } from 'lucide-react';
 import { NAV_LINKS } from '../data/navigation';
 import { SocialLinksRow } from './SocialIcons';
@@ -21,7 +22,10 @@ const ICON_MAP = {
   Sprout,
   BookOpen,
   Award,
-  FileSpreadsheet
+  FileSpreadsheet,
+  FileText,
+  Camera,
+  Newspaper
 };
 
 export default function Navbar() {

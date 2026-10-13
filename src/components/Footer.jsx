@@ -49,15 +49,17 @@ export default function Footer() {
 
         {/* Column 2: About GMVS & Quick Links */}
         <div>
-          <h3 className="footer-title">About GMVS</h3>
+          <h3 className="footer-title">About &amp; Proof</h3>
           <ul className="footer-links-list">
             <li><Link to="/about">Who We Are</Link></li>
             <li><Link to="/leadership">Governing Body</Link></li>
-            <li><Link to="/leadership#team">Our Executive Team</Link></li>
             <li><Link to="/partners">Our Partners &amp; CSR</Link></li>
-            <li><Link to="/awards">Impact &amp; Awards</Link></li>
+            <li><Link to="/awards">Awards &amp; Honours</Link></li>
+            <li><Link to="/annual-reports">26 Annual Reports</Link></li>
+            <li><Link to="/gallery">Photo Gallery</Link></li>
+            <li><Link to="/media-reports">Media Reports</Link></li>
             <li><Link to="/stories">Field Stories</Link></li>
-            <li><Link to="/contact#careers">Careers &amp; Internships</Link></li>
+            <li><Link to="/contact">Contact &amp; Offices</Link></li>
           </ul>
         </div>
 

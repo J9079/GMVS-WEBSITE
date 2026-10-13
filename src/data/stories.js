@@ -1,119 +1,128 @@
 export const STORIES = [
   {
-    id: 'rukma-devi',
-    category: 'women',
-    tag: 'Women Empowerment & Enterprise',
-    title: 'From Daily Struggle to Self-Reliant Apparel Entrepreneur',
-    quote: '“Joining the GMVS SHG and learning professional sewing changed my life. Today, I earn with dignity and my daughter studies in college.”',
-    body: 'Rukma Devi from rural Ajmer was trapped in informal wage labour with uncertain income. Through GMVS’s women collective mobilisation, she joined an SHG, accessed credit, received sewing skills training, and now operates a flourishing tailoring enterprise.',
+    id: 'goat-rearing-rukma',
+    category: 'livelihoods',
+    tag: 'Livelihoods & Animal Husbandry',
+    title: 'Goat Rearing Leads to Enhanced Income & Dignity',
+    quote: '“Joining the GMVS livelihood cluster and raising Sirohi goats changed everything. Today we have financial stability and my daughter attends college without stress.”',
+    image: 'https://gmvs.org.in/wp-content/uploads/2025/10/goat-rearing-leads-to-enhanced-income.jpg',
+    body: 'Rukma Devi is a 40-year-old resident of Khayda village in Bhinai tehsil, Ajmer district. Her household faced severe economic stress through informal dryland wage labour. With GMVS livestock development intervention, she received high-yield Sirohi breed goats and veterinary deworming guidance, expanding her herd and tripling her annual disposable income.',
     beneficiary: {
       name: 'Rukma Devi',
-      location: 'Ajmer District, Rajasthan',
-      impact: 'SHG Member & Tailoring Leader'
-    }
-  },
-  {
-    id: 'hagami-devi',
-    category: 'water',
-    tag: 'Jal Shakti & Drinking Water Security',
-    title: 'Ending Miles of Water Fetching with Rainwater Taanka',
-    quote: '“Earlier, I spent four hours daily walking under scorching sun for two pots of brackish water. Our GMVS Taanka stores pure nectar right at our doorstep.”',
-    body: 'In drought-prone rural Rajasthan, women walked miles for drinking water. With GMVS Jal Shakti intervention, Hagami Devi’s household received a traditional rooftop rainwater harvesting tank (Taanka) storing 25,000 litres of drinking water throughout dry summer months.',
-    beneficiary: {
-      name: 'Hagami Devi',
-      location: 'Thanwala, Nagaur',
-      impact: 'Clean Drinking Water for Family'
-    }
-  },
-  {
-    id: 'ganga',
-    category: 'education',
-    tag: 'Child Rights & Girl Child Schooling',
-    title: 'Rescued from Forced Labour, Excelling in Class 10',
-    quote: '“I thought my destiny was cutting grass and collecting firewood. GMVS brought me to the remedial centre, gave me books, and helped me re-enter government school.”',
-    body: 'Ganga was out of school for 3 years, helping her family survive as agricultural wage workers. GMVS community mobilisers convinced her parents, provided bridge education at our remedial centre, and mainstreamed her into secondary school.',
-    beneficiary: {
-      name: 'Ganga Rawat',
-      location: 'Bubani Cluster, Ajmer',
-      impact: 'Class 10 Student & Youth Leader'
-    }
-  },
-  {
-    id: 'chanta-devi',
-    category: 'health',
-    tag: 'Rural Health & Free Eye Surgeries',
-    title: 'Regaining Vision at Age 68 Through Mobile Eye Clinic',
-    quote: '“I was completely blind in both eyes from cataracts and felt like a burden to my family. After the GMVS surgery, I can see my grandchildren’s faces clearly.”',
-    body: 'In partnership with specialized ophthalmic institutions and Sightsavers, GMVS conducts free eye screening and cataract surgery camps. Chanta Devi received free surgical treatment, intraocular lens implantation, and post-operative care.',
-    beneficiary: {
-      name: 'Chanta Devi',
-      location: 'Chittorgarh Rural',
-      impact: 'Complete Vision Restoration'
-    }
-  },
-  {
-    id: 'rinku',
-    category: 'education',
-    tag: 'Child Education & Digital Literacy',
-    title: 'Breaking the Cycle of Generational Illiteracy',
-    quote: '“My father never went to school. Through GMVS remedial learning classes, I learned math and computer fundamentals. I want to become a teacher.”',
-    body: 'Rinku faced severe learning deficits in a remote village school. After 18 months of intensive remedial support from GMVS tutors, he topped his village middle school exams and now mentors younger children.',
-    beneficiary: {
-      name: 'Rinku Kumar',
-      location: 'Gagwana, Ajmer',
-      impact: 'Middle School Topper'
-    }
-  },
-  {
-    id: 'guranath',
-    category: 'water',
-    tag: 'Soil Conservation & Water Harvesting',
-    title: 'Reviving Barren Fields with Field Bunding and Khadins',
-    quote: '“Rainwater used to wash away our topsoil. With GMVS watershed structures, our moisture is trapped, and our wheat yield doubled.”',
-    body: 'Guranath struggled with erratic rainfall and severe topsoil erosion. GMVS community water management team constructed contour bunds and earthen water recharge check structures across 50 bighas of community land.',
-    beneficiary: {
-      name: 'Guranath',
-      location: 'Aravalli Foothills, Ajmer',
-      impact: 'Double Crop Yield on 5 Bighas'
-    }
-  },
-  {
-    id: 'chuka',
-    category: 'livelihoods',
-    tag: 'Animal Husbandry & Breed Improvement',
-    title: 'Building Economic Security Through Sirohi Goat Rearing',
-    quote: '“With two goats provided through GMVS livelihood cluster, I now have a herd of nine. I pay my children’s school fees independently.”',
-    body: 'To combat acute rural poverty, GMVS introduced indigenous Sirohi goat rearing units with veterinary support, deworming, and breed improvement, creating sustainable supplementary income for landless women.',
-    beneficiary: {
-      name: 'Chuka Devi',
-      location: 'Thanwala Watershed, Nagaur',
+      location: 'Khayda Village, Bhinai, Ajmer',
       impact: 'Livestock Cluster Beneficiary'
     }
   },
   {
-    id: 'jhoomi-devi',
+    id: 'hopeful-tailoring',
     category: 'women',
-    tag: 'Grassroots Women Leadership',
-    title: 'From Veiled Villager to Village Panchayat Leader',
-    quote: '“Before GMVS, I couldn’t speak in front of village elders. The leadership training taught me my legal rights, and now I lead our village Gram Sabha.”',
-    body: 'Jhoomi Devi transformed from an isolated rural homemaker into a vocal grassroots activist after participating in GMVS’s civic rights, Panchayati Raj governance, and women leadership training modules.',
+    tag: 'Women Enterprise & Skills',
+    title: 'Hopeful of Taking Tailoring Full-Time',
+    quote: '“The GMVS sewing center taught me professional pattern cutting and blouse tailoring. I now take commercial stitching orders and plan to open my own boutique.”',
+    image: 'https://gmvs.org.in/wp-content/uploads/2025/10/hopeful-of-taking-tailoring-full-time.jpg',
+    body: 'Faced with limited livelihood avenues in rural Rajasthan, she joined GMVS’s certified garment production workshop. Mastering modern stitch finishing and pattern assembly, she transitioned from irregular home chores into a respected micro-entrepreneur serving customers across 5 neighboring villages.',
     beneficiary: {
-      name: 'Jhoomi Devi',
-      location: 'Ajmer Rural',
-      impact: 'Panchayat Ward Member & SHG Animator'
+      name: 'Santosh Rawat',
+      location: 'Ajmer District, Rajasthan',
+      impact: 'Apparel Center Entrepreneur'
     }
   },
   {
-    id: 'mira-devi',
+    id: 'dreams-bright-future-ganga',
+    category: 'education',
+    tag: 'Child Rights & Girl Child Schooling',
+    title: 'Dreams of a Bright Future: From Dropout to Secondary Scholar',
+    quote: '“I thought my education had ended forever. GMVS brought me to the remedial center, gave me textbooks and stationery, and helped me rejoin school with confidence.”',
+    image: 'https://gmvs.org.in/wp-content/uploads/2025/10/dreams-of-bright-future.jpg',
+    body: 'Ganga, aged 15, is the daughter of Ram Chandra residing at Bubani in Ajmer district. Severe economic duress had forced her out of the formal schooling system. GMVS child mobilisers counseled her family, provided 8 months of bridging remedial coursework, and successfully enrolled her into Class 10 where she excels today.',
+    beneficiary: {
+      name: 'Ganga Rawat',
+      location: 'Bubani, Ajmer District',
+      impact: 'Class 10 Student & Youth Leader'
+    }
+  },
+  {
+    id: 'hagami-devi-taanka',
+    category: 'water',
+    tag: 'Jal Shakti & Drinking Water Security',
+    title: 'Ending Miles of Daily Water Fetching with Rainwater Taanka',
+    quote: '“Earlier, I spent four hours daily walking under the scorching desert sun for two pots of salty water. Our GMVS Taanka stores pure sweet nectar right at our doorstep.”',
+    image: 'https://gmvs.org.in/wp-content/uploads/photo-gallery/agriculture/pg-45.jpeg',
+    body: 'In drought-prone rural Rajasthan, women historically spent several hours daily trudging long distances for drinking water. With GMVS Jal Shakti support, Hagami Devi’s family built a traditional 25,000-litre domestic rooftop rainwater harvesting Taanka, securing drinking water through the driest summer months.',
+    beneficiary: {
+      name: 'Hagami Devi',
+      location: 'Thanwala, Nagaur District',
+      impact: 'Year-Round Clean Drinking Water'
+    }
+  },
+  {
+    id: 'chanta-devi-vision',
+    category: 'health',
+    tag: 'Rural Health & Free Cataract Surgeries',
+    title: 'Regaining Vision at Age 68 Through Mobile Eye Clinic',
+    quote: '“I was completely blind in both eyes from mature cataracts and felt like a burden to my family. After the GMVS surgery, I can see my grandchildren’s smiling faces clearly.”',
+    image: 'https://gmvs.org.in/wp-content/uploads/photo-gallery/health/pg-48.jpeg',
+    body: 'In partnership with specialized ophthalmic institutions and Sightsavers, GMVS conducts regular mobile eye screening camps in interior villages. Chanta Devi received free transport, diagnostic workup, cataract extraction, and intraocular lens implantation, restoring full vision.',
+    beneficiary: {
+      name: 'Chanta Devi',
+      location: 'Chittorgarh Rural, Rajasthan',
+      impact: 'Complete Vision Restoration'
+    }
+  },
+  {
+    id: 'rinku-education',
+    category: 'education',
+    tag: 'Child Education & Digital Literacy',
+    title: 'Breaking the Cycle of Generational Illiteracy',
+    quote: '“My father never went to school. Through GMVS remedial learning classes, I mastered mathematics and computer basics. I dream of becoming a teacher.”',
+    image: 'https://gmvs.org.in/wp-content/uploads/photo-gallery/miscellaneous/pg-26.jpeg',
+    body: 'Rinku experienced severe foundational learning gaps in a remote village school. After 18 months of intensive coaching at GMVS’s community education centre, he topped his school examinations and now mentors younger first-generation learners in his hamlet.',
+    beneficiary: {
+      name: 'Rinku Kumar',
+      location: 'Gagwana, Ajmer District',
+      impact: 'School Topper & Peer Mentor'
+    }
+  },
+  {
+    id: 'jhoomi-devi-leadership',
+    category: 'women',
+    tag: 'Grassroots Women Leadership',
+    title: 'From Veiled Homemaker to Village Panchayat Leader',
+    quote: '“Before GMVS, I couldn’t speak up in front of village elders. The leadership training taught me my legal rights, and now I lead discussions in our Gram Sabha.”',
+    image: 'https://gmvs.org.in/wp-content/uploads/photo-gallery/women/pg-51.jpeg',
+    body: 'Jhoomi Devi evolved from an isolated rural homemaker into a respected civic leader after participating in GMVS’s civic rights, Panchayati Raj governance, and women leadership training modules. Today she mobilises hundreds of women for local governance audits.',
+    beneficiary: {
+      name: 'Jhoomi Devi',
+      location: 'Ajmer Rural, Rajasthan',
+      impact: 'Panchayat Ward Member & Animator'
+    }
+  },
+  {
+    id: 'guranath-watershed',
+    category: 'water',
+    tag: 'Soil Conservation & Water Harvesting',
+    title: 'Reviving Barren Farmland with Contour Bunding & Khadins',
+    quote: '“Monsoon rains used to wash away our fertile topsoil. With GMVS watershed bunds, moisture is conserved and our wheat harvest doubled.”',
+    image: 'https://gmvs.org.in/wp-content/uploads/photo-gallery/agriculture/pg-10.jpeg',
+    body: 'Guranath struggled with erratic rainfall and extreme soil erosion on his 5 bighas of land. GMVS’s natural resource management team built earthen check structures and contour bunds across community catchment zones, recharging the local water table and doubling crop yields.',
+    beneficiary: {
+      name: 'Guranath',
+      location: 'Aravalli Foothills, Ajmer',
+      impact: 'Doubled Crop Harvest on 5 Bighas'
+    }
+  },
+  {
+    id: 'mira-devi-maternal',
     category: 'health',
     tag: 'Maternal Nutrition & Safe Childbirth',
-    title: 'Ensuring Safe Delivery and Institutional Childcare',
-    quote: '“The GMVS health workers visited me every month, provided iron supplements, and ensured I delivered safely at the hospital.”',
-    body: 'Combating high maternal mortality in rural hamlets, GMVS mobilises village health workers to identify high-risk pregnancies, distribute nutrition kits, and promote 100% institutional deliveries.',
+    title: 'Ensuring Safe Delivery and Institutional Infant Healthcare',
+    quote: '“The GMVS health animators visited me every month, provided iron supplements, and ensured I reached the hospital safely for delivery.”',
+    image: 'https://gmvs.org.in/wp-content/uploads/photo-gallery/health/pg-28.jpeg',
+    body: 'To eliminate preventable maternal and infant complications in remote desert settlements, GMVS mobilises village health workers to conduct home visits, track high-risk pregnancies, supply nutrition kits, and guarantee 100% institutional deliveries.',
     beneficiary: {
       name: 'Mira Devi',
-      location: 'Bubani, Ajmer',
-      impact: 'Healthy Mother & Infant Support'
+      location: 'Bubani Cluster, Ajmer',
+      impact: 'Safe Institutional Delivery & Infant Care'
     }
   }
 ];

@@ -134,25 +134,25 @@ const TESTIMONIALS = [
 
 const NEWS_UPDATES = [
   {
-    date: "March 2026",
-    title: "GMVS Expands Taanka Water Harvesting Initiative to 15 New Hamlets in Ajmer",
-    excerpt: "With support from institutional donors, construction of 40 new household rainwater harvesting structures begins to ensure clean drinking water ahead of summer.",
-    image: "assets/images/nrm.jpg",
-    link: "/stories"
+    date: "Press Report • Ecology",
+    title: "पौधारोपण कार्यक्रम आयोजित: Mega Afforestation Campaign across Ajmer",
+    excerpt: "GMVS mobilized rural youth, women collectives, and school students to plant drought-hardy shade and fruit trees across community commons.",
+    image: "https://gmvs.org.in/wp-content/uploads/photo-gallery/media/thumb/paudharopan-karyakram-ayojit-.jpeg?bwg=1759831083",
+    link: "/media-reports"
   },
   {
-    date: "February 2026",
-    title: "Digital Financial Literacy Workshops Successfully Conducted for 350 Women Artisans",
-    excerpt: "Empowering rural SHG entrepreneurs with UPI digital payments, bank transfer security, and accounting basics across Srinagar and Jawaja blocks.",
-    image: "assets/images/women-empowerment.jpg",
-    link: "/stories"
+    date: "Livelihoods • Women Enterprise",
+    title: "निमेड़ा गांव में संगिनी उत्पादन केंद्र का उद्घाटन: Sangini Production Unit",
+    excerpt: "Inauguration of the Sangini livelihood and sanitary pad production facility in Nimeda village, generating daily employment for local rural women.",
+    image: "https://gmvs.org.in/wp-content/uploads/photo-gallery/media/thumb/nimeda-gaon-men-sangini-utpadan-kendra-ka-udghatan.jpeg?bwg=1759831083",
+    link: "/media-reports"
   },
   {
-    date: "January 2026",
-    title: "Annual Girl Child Education Drive Re-enrolls 240 Out-of-School Children",
-    excerpt: "Door-to-door community counseling and remedial kits distributed in rural school clusters to ensure zero dropouts among tribal girl students.",
-    image: "assets/images/child-rights.jpg",
-    link: "/stories"
+    date: "Rural Health • Medical Outreach",
+    title: "शिविर में 100 लोगों की स्वास्थ्य जांच: Free Health & Eye Diagnostic Camp",
+    excerpt: "Free general health and eye screening camp by GMVS medical teams, providing vital diagnostics, free medicines, and cataract surgery referrals.",
+    image: "https://gmvs.org.in/wp-content/uploads/photo-gallery/media/thumb/shivir-me-100-logon-ki-swasthya-jaanch.jpeg?bwg=1759831083",
+    link: "/media-reports"
   }
 ];
 
@@ -572,6 +572,21 @@ export default function HomePage({ lang, onNotify }) {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div style={{ textAlign: 'center', marginTop: '2.5rem', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1rem' }}>
+            <Link to="/media-reports" className="btn01 btn01-outline">
+              <span>All Media &amp; Press Clippings</span>
+              <ArrowRight size={14} />
+            </Link>
+            <Link to="/gallery" className="btn01 btn01-outline">
+              <span>Browse Photo Gallery</span>
+              <ArrowRight size={14} />
+            </Link>
+            <Link to="/annual-reports" className="btn01 btn01-primary">
+              <span>View 26 Annual Reports</span>
+              <ArrowRight size={14} />
+            </Link>
           </div>
         </div>
       </section>

@@ -13,6 +13,9 @@ import LeadershipPage from './pages/LeadershipPage';
 import StoriesPage from './pages/StoriesPage';
 import PartnersPage from './pages/PartnersPage';
 import AwardsPage from './pages/AwardsPage';
+import AnnualReportsPage from './pages/AnnualReportsPage';
+import MediaReportsPage from './pages/MediaReportsPage';
+import GalleryPage from './pages/GalleryPage';
 import ContactPage from './pages/ContactPage';
 import DonatePage from './pages/DonatePage';
 
@@ -102,8 +105,15 @@ export default function App() {
           <Route path="/programs" element={<ProgramsPage onNotify={showNotification} />} />
           <Route path="/leadership" element={<LeadershipPage onNotify={showNotification} />} />
           <Route path="/stories" element={<StoriesPage onNotify={showNotification} />} />
+          <Route path="/stories-from-the-field" element={<StoriesPage onNotify={showNotification} />} />
           <Route path="/partners" element={<PartnersPage onNotify={showNotification} />} />
           <Route path="/awards" element={<AwardsPage onNotify={showNotification} />} />
+          <Route path="/awards-2" element={<AwardsPage onNotify={showNotification} />} />
+          <Route path="/annual-reports" element={<AnnualReportsPage onNotify={showNotification} />} />
+          <Route path="/media-reports" element={<MediaReportsPage onNotify={showNotification} />} />
+          <Route path="/photo-gallery-2" element={<MediaReportsPage onNotify={showNotification} />} />
+          <Route path="/gallery" element={<GalleryPage onNotify={showNotification} />} />
+          <Route path="/photo-gallery" element={<GalleryPage onNotify={showNotification} />} />
           <Route path="/contact" element={<ContactPage onNotify={showNotification} />} />
           <Route path="/donate" element={<DonatePage onNotify={showNotification} />} />
           {/* Catch-all fallback */}
